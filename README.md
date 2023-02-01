@@ -1,10 +1,10 @@
 # ChemicalFormulaHelper
 
-Beta
+v0.0.1
 
 ## Methods and parameters
 
-#### `int calcMr(String chemicalFormula)`
+#### `double calcMr(String chemicalFormula)`
 
 ```
 parameter
