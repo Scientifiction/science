@@ -38,12 +38,12 @@ public class ChemicalFormulaHelper{
 
 
 	//Obtain the relative atomic mass of an element
-	public static int getAr(String formula){
-		int ar = 0;
+	public static double getAr(String formula){
+		double ar = 0.0;
 		//Element symbol
-		String[] arrA = {"H","He","Li","Be","B","C","N","O","F","Ne"};
+		String[] arrA = {"H","He","Li","Be","B","C","N","O","F","Ne","Na","Mg","Al","Si","P","S","Cl","Ar","K","Ca","Sc","Ti","V","Cr","Mn","Fe","Co","Ni","Cu","Zn","Ga","Ge","As","Se","Br","Kr","Rb","Sr","Y","Zr","Nb","Mo","Tc","Ru","Rh","Pd","Ag","Cd","In","Sn","Sb","Te","I","Xe","Cs","Ba","La","Ce","Pr","Nd","Pm","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu","Hf","Ta","W","Re","Os","Ir","Pt","Au","Hg","Tl","Pb","Bi","Po","At","Rn","Fr","Ra","Ac","Th","Pa","U","Np","Pu","Am","Cm","Bk","Cf","Es","Fm","Md","No","Lr","Rf","Db","Sg","Bh","Hs","Mt","Ds","Rg","Cn","Fl","Lv"};
 		//Relative atomic mass
-		int[] arrB = {1,4,7,9,10,12,14,16,19,20};
+		double[] arrB = {1,4,7,9,11,12,14,16,19,20,23,24,27,28,31,32,35.5,40,39,40,45,48,51,52,55,56,59,59,64,65,70,73,75,79,80,84,85,87,89,91,93,96,98,101,103,106,108,112,115,119,122,128,127,131,133,137,139,140,141,144,145,150,152,157,159,162,165,167,169,173,175,178,181,184,186,190,192,195,197,201,204,207,209,209,210,222,223,226,227,232,231,238,239,243,245,247,249,253,254,259,260,261,264,269,270,273,274,272,278,283,282,287,291,295};
 		for (int i = 0;i < arrA.length;i++){
 			if(arrA[i].equals(formula)){
 				ar = arrB[i];
