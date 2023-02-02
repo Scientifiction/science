@@ -24,13 +24,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ChemicalFormulaHelper{
-	private static final Pattern elementPattern = Pattern.compile("([A-Z][a-z]?)(\d*)");
+	private static final Pattern elementPattern = Pattern.compile("([A-Z][a-z]?)(\\d*)");
 	public static double calcMr(String formula){
 		Matcher matcher = elementPattern.matcher(formula);
 		double mass = 0;
 		while (matcher.find()){
 			String elementSymbol = matcher.group(1);
-			int elementCount = matcher.group(2).isEmpty() ? 1 : Integer.parseint(matcher.group(2));
+			int elementCount = matcher.group(2).isEmpty() ? 1 : Integer.parseInt(matcher.group(2));
 			mass += getAr(elementSymbol) * elementCount;
 		}
 		return mass;
@@ -45,7 +45,7 @@ public class ChemicalFormulaHelper{
 		//Relative atomic mass
 		int[] arrB = {1,4,7,9,10,12,14,16,19,20};
 		for (int i = 0;i < arrA.length;i++){
-			if(arrA[i] == formula){
+			if(arrA[i].equals(formula)){
 				ar = arrB[i];
 				break;
 			}
