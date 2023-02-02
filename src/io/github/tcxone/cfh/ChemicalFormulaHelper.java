@@ -20,46 +20,20 @@
 
 package io.github.tcxone.cfh;
 
-import java.util.Map;
-import java.util.HashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ChemicalFormulaHelper{
-
-
+	private static final Pattern elementPattern = Pattern.compile("([A-Z][a-z]?)(\d*)");
 	public static double calcMr(String formula){
-		Map<String, Integer> elements = new HashMap<>();
-		int n = formula.length();
-		String element = "";
-		int count = 1;
-		for(int i = 0; i < n; i++){
-			char c = formula.charAt(i);
-			if(Character.isUpperCase(c)){
-				if(!element.isEmpty()){
-					elements.put(element, count);
-				}
-				element = "" + c;
-				count = 1;
-			}else if(Character.isLowerCase(c)){
-				element += c;
-			}else if(Character.isDigit(c)){
-				int end = i + 1;
-				while(end < n && Character.isDigit(formula.charAt(end))){
-					end++;
-				}
-				count = Integer.parseint(formula.substring(i, end));
-				i = end - 1;
-			}
+		Matcher matcher = elementPattern.matcher(formula);
+		double mass = 0;
+		while (matcher.find()){
+			String elementSymbol = matcher.group(1);
+			int elementCount = matcher.group(2).isEmpty() ? 1 : Integer.parseint(matcher.group(2));
+			mass += getAr(elementSymbol) * elementCount;
 		}
-		if(!element.isEmpty()){
-			elements.put(element, count);
-		}
-		double molecularMass = 0.0;
-		for(Map.Entry<String, Integer> entry : elements.entrySet()){
-			element = entry.getKey();
-			count = entry.getValue();
-			molecularMass += count * getAr(element);
-		}
-		return molecularMass;
+		return mass;
 	}
 
 
@@ -70,7 +44,7 @@ public class ChemicalFormulaHelper{
 		String[] arrA = {"H","He","Li","Be","B","C","N","O","F","Ne"};
 		//Relative atomic mass
 		int[] arrB = {1,4,7,9,10,12,14,16,19,20};
-		for(int i = 0;i < arrA.length;i++){
+		for (int i = 0;i < arrA.length;i++){
 			if(arrA[i] == formula){
 				ar = arrB[i];
 				break;
