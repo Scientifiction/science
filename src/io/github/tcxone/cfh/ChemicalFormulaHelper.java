@@ -1,5 +1,5 @@
 // GitHub tcxone/ChemicalFormulaHelper
-// v0.0.1
+// v0.0.2
 // MIT License
 // Copyright (c) 2022 Code Robertson
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -70,10 +70,10 @@ public class ChemicalFormulaHelper{
 			File data = new File("mainData.xml");
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document doc = dBuilder.parse(inputFile);
+			Document doc = dBuilder.parse(data);
 			doc.getDocumentElement().normalize();
 			NodeList nList = doc.getElementsByTagName("Row");
-			Node nNode = nList.item(atomicNumber);
+			Node nNode = nList.item(atomicNumber - 1);
 			if(nNode.getNodeType() == Node.ELEMENT_NODE){
 				Element eElement = (Element) nNode;
 				switch(keyword){
@@ -90,7 +90,7 @@ public class ChemicalFormulaHelper{
 						i = 4;
 						break;
 					case "ElectronConfiguration":
-						i = 5:
+						i = 5;
 						break;
 					case "Electronegativity":
 						i = 6;
@@ -135,6 +135,18 @@ public class ChemicalFormulaHelper{
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+		return result;
+	}
+
+
+	public static int getDataInt(int atomicNumber,String keyword){
+		int result = Integer.parseInt(getData(atomicNumber,keyword));
+		return result;
+	}
+
+
+	public static double getDataDouble(int atomicNumber,String keyword){
+		double result = Double.parseDouble(getData(atomicNumber,keyword));
 		return result;
 	}
 
