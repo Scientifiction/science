@@ -1,0 +1,2264 @@
+<?xml version="1.0"?>
+<Table>
+  <Columns>
+    <Column>AtomicNumber</Column>
+    <Column>Symbol</Column>
+    <Column>Name</Column>
+    <Column>AtomicMass</Column>
+    <Column>CPKHexColor</Column>
+    <Column>ElectronConfiguration</Column>
+    <Column>Electronegativity</Column>
+    <Column>AtomicRadius</Column>
+    <Column>IonizationEnergy</Column>
+    <Column>ElectronAffinity</Column>
+    <Column>OxidationStates</Column>
+    <Column>StandardState</Column>
+    <Column>MeltingPoint</Column>
+    <Column>BoilingPoint</Column>
+    <Column>Density</Column>
+    <Column>GroupBlock</Column>
+    <Column>YearDiscovered</Column>
+  </Columns>
+  <Row>
+    <Cell>1</Cell>
+    <Cell>H</Cell>
+    <Cell>Hydrogen</Cell>
+    <Cell>1.0080</Cell>
+    <Cell>FFFFFF</Cell>
+    <Cell>1s1</Cell>
+    <Cell>2.2</Cell>
+    <Cell>120</Cell>
+    <Cell>13.598</Cell>
+    <Cell>0.754</Cell>
+    <Cell>+1, -1</Cell>
+    <Cell>Gas</Cell>
+    <Cell>13.81</Cell>
+    <Cell>20.28</Cell>
+    <Cell>0.00008988</Cell>
+    <Cell>Nonmetal</Cell>
+    <Cell>1766</Cell>
+  </Row>
+  <Row>
+    <Cell>2</Cell>
+    <Cell>He</Cell>
+    <Cell>Helium</Cell>
+    <Cell>4.00260</Cell>
+    <Cell>D9FFFF</Cell>
+    <Cell>1s2</Cell>
+    <Cell></Cell>
+    <Cell>140</Cell>
+    <Cell>24.587</Cell>
+    <Cell></Cell>
+    <Cell>0</Cell>
+    <Cell>Gas</Cell>
+    <Cell>0.95</Cell>
+    <Cell>4.22</Cell>
+    <Cell>0.0001785</Cell>
+    <Cell>Noble gas</Cell>
+    <Cell>1868</Cell>
+  </Row>
+  <Row>
+    <Cell>3</Cell>
+    <Cell>Li</Cell>
+    <Cell>Lithium</Cell>
+    <Cell>7.0</Cell>
+    <Cell>CC80FF</Cell>
+    <Cell>[He]2s1</Cell>
+    <Cell>0.98</Cell>
+    <Cell>182</Cell>
+    <Cell>5.392</Cell>
+    <Cell>0.618</Cell>
+    <Cell>+1</Cell>
+    <Cell>Solid</Cell>
+    <Cell>453.65</Cell>
+    <Cell>1615</Cell>
+    <Cell>0.534</Cell>
+    <Cell>Alkali metal</Cell>
+    <Cell>1817</Cell>
+  </Row>
+  <Row>
+    <Cell>4</Cell>
+    <Cell>Be</Cell>
+    <Cell>Beryllium</Cell>
+    <Cell>9.012183</Cell>
+    <Cell>C2FF00</Cell>
+    <Cell>[He]2s2</Cell>
+    <Cell>1.57</Cell>
+    <Cell>153</Cell>
+    <Cell>9.323</Cell>
+    <Cell></Cell>
+    <Cell>+2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1560</Cell>
+    <Cell>2744</Cell>
+    <Cell>1.85</Cell>
+    <Cell>Alkaline earth metal</Cell>
+    <Cell>1798</Cell>
+  </Row>
+  <Row>
+    <Cell>5</Cell>
+    <Cell>B</Cell>
+    <Cell>Boron</Cell>
+    <Cell>10.81</Cell>
+    <Cell>FFB5B5</Cell>
+    <Cell>[He]2s2 2p1</Cell>
+    <Cell>2.04</Cell>
+    <Cell>192</Cell>
+    <Cell>8.298</Cell>
+    <Cell>0.277</Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>2348</Cell>
+    <Cell>4273</Cell>
+    <Cell>2.37</Cell>
+    <Cell>Metalloid</Cell>
+    <Cell>1808</Cell>
+  </Row>
+  <Row>
+    <Cell>6</Cell>
+    <Cell>C</Cell>
+    <Cell>Carbon</Cell>
+    <Cell>12.011</Cell>
+    <Cell>909090</Cell>
+    <Cell>[He]2s2 2p2</Cell>
+    <Cell>2.55</Cell>
+    <Cell>170</Cell>
+    <Cell>11.260</Cell>
+    <Cell>1.263</Cell>
+    <Cell>+4, +2, -4</Cell>
+    <Cell>Solid</Cell>
+    <Cell>3823</Cell>
+    <Cell>4098</Cell>
+    <Cell>2.2670</Cell>
+    <Cell>Nonmetal</Cell>
+    <Cell>Ancient</Cell>
+  </Row>
+  <Row>
+    <Cell>7</Cell>
+    <Cell>N</Cell>
+    <Cell>Nitrogen</Cell>
+    <Cell>14.007</Cell>
+    <Cell>3050F8</Cell>
+    <Cell>[He] 2s2 2p3</Cell>
+    <Cell>3.04</Cell>
+    <Cell>155</Cell>
+    <Cell>14.534</Cell>
+    <Cell></Cell>
+    <Cell>+5, +4, +3, +2, +1, -1, -2, -3</Cell>
+    <Cell>Gas</Cell>
+    <Cell>63.15</Cell>
+    <Cell>77.36</Cell>
+    <Cell>0.0012506</Cell>
+    <Cell>Nonmetal</Cell>
+    <Cell>1772</Cell>
+  </Row>
+  <Row>
+    <Cell>8</Cell>
+    <Cell>O</Cell>
+    <Cell>Oxygen</Cell>
+    <Cell>15.999</Cell>
+    <Cell>FF0D0D</Cell>
+    <Cell>[He]2s2 2p4</Cell>
+    <Cell>3.44</Cell>
+    <Cell>152</Cell>
+    <Cell>13.618</Cell>
+    <Cell>1.461</Cell>
+    <Cell>-2</Cell>
+    <Cell>Gas</Cell>
+    <Cell>54.36</Cell>
+    <Cell>90.2</Cell>
+    <Cell>0.001429</Cell>
+    <Cell>Nonmetal</Cell>
+    <Cell>1774</Cell>
+  </Row>
+  <Row>
+    <Cell>9</Cell>
+    <Cell>F</Cell>
+    <Cell>Fluorine</Cell>
+    <Cell>18.99840316</Cell>
+    <Cell>90E050</Cell>
+    <Cell>[He]2s2 2p5</Cell>
+    <Cell>3.98</Cell>
+    <Cell>135</Cell>
+    <Cell>17.423</Cell>
+    <Cell>3.339</Cell>
+    <Cell>-1</Cell>
+    <Cell>Gas</Cell>
+    <Cell>53.53</Cell>
+    <Cell>85.03</Cell>
+    <Cell>0.001696</Cell>
+    <Cell>Halogen</Cell>
+    <Cell>1670</Cell>
+  </Row>
+  <Row>
+    <Cell>10</Cell>
+    <Cell>Ne</Cell>
+    <Cell>Neon</Cell>
+    <Cell>20.180</Cell>
+    <Cell>B3E3F5</Cell>
+    <Cell>[He]2s2 2p6</Cell>
+    <Cell></Cell>
+    <Cell>154</Cell>
+    <Cell>21.565</Cell>
+    <Cell></Cell>
+    <Cell>0</Cell>
+    <Cell>Gas</Cell>
+    <Cell>24.56</Cell>
+    <Cell>27.07</Cell>
+    <Cell>0.0008999</Cell>
+    <Cell>Noble gas</Cell>
+    <Cell>1898</Cell>
+  </Row>
+  <Row>
+    <Cell>11</Cell>
+    <Cell>Na</Cell>
+    <Cell>Sodium</Cell>
+    <Cell>22.9897693</Cell>
+    <Cell>AB5CF2</Cell>
+    <Cell>[Ne]3s1</Cell>
+    <Cell>0.93</Cell>
+    <Cell>227</Cell>
+    <Cell>5.139</Cell>
+    <Cell>0.548</Cell>
+    <Cell>+1</Cell>
+    <Cell>Solid</Cell>
+    <Cell>370.95</Cell>
+    <Cell>1156</Cell>
+    <Cell>0.97</Cell>
+    <Cell>Alkali metal</Cell>
+    <Cell>1807</Cell>
+  </Row>
+  <Row>
+    <Cell>12</Cell>
+    <Cell>Mg</Cell>
+    <Cell>Magnesium</Cell>
+    <Cell>24.305</Cell>
+    <Cell>8AFF00</Cell>
+    <Cell>[Ne]3s2</Cell>
+    <Cell>1.31</Cell>
+    <Cell>173</Cell>
+    <Cell>7.646</Cell>
+    <Cell></Cell>
+    <Cell>+2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>923</Cell>
+    <Cell>1363</Cell>
+    <Cell>1.74</Cell>
+    <Cell>Alkaline earth metal</Cell>
+    <Cell>1808</Cell>
+  </Row>
+  <Row>
+    <Cell>13</Cell>
+    <Cell>Al</Cell>
+    <Cell>Aluminum</Cell>
+    <Cell>26.981538</Cell>
+    <Cell>BFA6A6</Cell>
+    <Cell>[Ne]3s2 3p1</Cell>
+    <Cell>1.61</Cell>
+    <Cell>184</Cell>
+    <Cell>5.986</Cell>
+    <Cell>0.441</Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>933.437</Cell>
+    <Cell>2792</Cell>
+    <Cell>2.70</Cell>
+    <Cell>Post-transition metal</Cell>
+    <Cell>Ancient</Cell>
+  </Row>
+  <Row>
+    <Cell>14</Cell>
+    <Cell>Si</Cell>
+    <Cell>Silicon</Cell>
+    <Cell>28.085</Cell>
+    <Cell>F0C8A0</Cell>
+    <Cell>[Ne]3s2 3p2</Cell>
+    <Cell>1.9</Cell>
+    <Cell>210</Cell>
+    <Cell>8.152</Cell>
+    <Cell>1.385</Cell>
+    <Cell>+4, +2, -4</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1687</Cell>
+    <Cell>3538</Cell>
+    <Cell>2.3296</Cell>
+    <Cell>Metalloid</Cell>
+    <Cell>1854</Cell>
+  </Row>
+  <Row>
+    <Cell>15</Cell>
+    <Cell>P</Cell>
+    <Cell>Phosphorus</Cell>
+    <Cell>30.97376200</Cell>
+    <Cell>FF8000</Cell>
+    <Cell>[Ne]3s2 3p3</Cell>
+    <Cell>2.19</Cell>
+    <Cell>180</Cell>
+    <Cell>10.487</Cell>
+    <Cell>0.746</Cell>
+    <Cell>+5, +3, -3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>317.3</Cell>
+    <Cell>553.65</Cell>
+    <Cell>1.82</Cell>
+    <Cell>Nonmetal</Cell>
+    <Cell>1669</Cell>
+  </Row>
+  <Row>
+    <Cell>16</Cell>
+    <Cell>S</Cell>
+    <Cell>Sulfur</Cell>
+    <Cell>32.07</Cell>
+    <Cell>FFFF30</Cell>
+    <Cell>[Ne]3s2 3p4</Cell>
+    <Cell>2.58</Cell>
+    <Cell>180</Cell>
+    <Cell>10.360</Cell>
+    <Cell>2.077</Cell>
+    <Cell>+6, +4, -2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>388.36</Cell>
+    <Cell>717.75</Cell>
+    <Cell>2.067</Cell>
+    <Cell>Nonmetal</Cell>
+    <Cell>Ancient</Cell>
+  </Row>
+  <Row>
+    <Cell>17</Cell>
+    <Cell>Cl</Cell>
+    <Cell>Chlorine</Cell>
+    <Cell>35.45</Cell>
+    <Cell>1FF01F</Cell>
+    <Cell>[Ne]3s2 3p5</Cell>
+    <Cell>3.16</Cell>
+    <Cell>175</Cell>
+    <Cell>12.968</Cell>
+    <Cell>3.617</Cell>
+    <Cell>+7, +5, +1, -1</Cell>
+    <Cell>Gas</Cell>
+    <Cell>171.65</Cell>
+    <Cell>239.11</Cell>
+    <Cell>0.003214</Cell>
+    <Cell>Halogen</Cell>
+    <Cell>1774</Cell>
+  </Row>
+  <Row>
+    <Cell>18</Cell>
+    <Cell>Ar</Cell>
+    <Cell>Argon</Cell>
+    <Cell>39.9</Cell>
+    <Cell>80D1E3</Cell>
+    <Cell>[Ne]3s2 3p6</Cell>
+    <Cell></Cell>
+    <Cell>188</Cell>
+    <Cell>15.760</Cell>
+    <Cell></Cell>
+    <Cell>0</Cell>
+    <Cell>Gas</Cell>
+    <Cell>83.8</Cell>
+    <Cell>87.3</Cell>
+    <Cell>0.0017837</Cell>
+    <Cell>Noble gas</Cell>
+    <Cell>1894</Cell>
+  </Row>
+  <Row>
+    <Cell>19</Cell>
+    <Cell>K</Cell>
+    <Cell>Potassium</Cell>
+    <Cell>39.0983</Cell>
+    <Cell>8F40D4</Cell>
+    <Cell>[Ar]4s1</Cell>
+    <Cell>0.82</Cell>
+    <Cell>275</Cell>
+    <Cell>4.341</Cell>
+    <Cell>0.501</Cell>
+    <Cell>+1</Cell>
+    <Cell>Solid</Cell>
+    <Cell>336.53</Cell>
+    <Cell>1032</Cell>
+    <Cell>0.89</Cell>
+    <Cell>Alkali metal</Cell>
+    <Cell>1807</Cell>
+  </Row>
+  <Row>
+    <Cell>20</Cell>
+    <Cell>Ca</Cell>
+    <Cell>Calcium</Cell>
+    <Cell>40.08</Cell>
+    <Cell>3DFF00</Cell>
+    <Cell>[Ar]4s2</Cell>
+    <Cell>1</Cell>
+    <Cell>231</Cell>
+    <Cell>6.113</Cell>
+    <Cell></Cell>
+    <Cell>+2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1115</Cell>
+    <Cell>1757</Cell>
+    <Cell>1.54</Cell>
+    <Cell>Alkaline earth metal</Cell>
+    <Cell>Ancient</Cell>
+  </Row>
+  <Row>
+    <Cell>21</Cell>
+    <Cell>Sc</Cell>
+    <Cell>Scandium</Cell>
+    <Cell>44.95591</Cell>
+    <Cell>E6E6E6</Cell>
+    <Cell>[Ar]4s2 3d1</Cell>
+    <Cell>1.36</Cell>
+    <Cell>211</Cell>
+    <Cell>6.561</Cell>
+    <Cell>0.188</Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1814</Cell>
+    <Cell>3109</Cell>
+    <Cell>2.99</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1879</Cell>
+  </Row>
+  <Row>
+    <Cell>22</Cell>
+    <Cell>Ti</Cell>
+    <Cell>Titanium</Cell>
+    <Cell>47.867</Cell>
+    <Cell>BFC2C7</Cell>
+    <Cell>[Ar]4s2 3d2</Cell>
+    <Cell>1.54</Cell>
+    <Cell>187</Cell>
+    <Cell>6.828</Cell>
+    <Cell>0.079</Cell>
+    <Cell>+4, +3, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1941</Cell>
+    <Cell>3560</Cell>
+    <Cell>4.5</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1791</Cell>
+  </Row>
+  <Row>
+    <Cell>23</Cell>
+    <Cell>V</Cell>
+    <Cell>Vanadium</Cell>
+    <Cell>50.9415</Cell>
+    <Cell>A6A6AB</Cell>
+    <Cell>[Ar]4s2 3d3</Cell>
+    <Cell>1.63</Cell>
+    <Cell>179</Cell>
+    <Cell>6.746</Cell>
+    <Cell>0.525</Cell>
+    <Cell>+5, +4, +3, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>2183</Cell>
+    <Cell>3680</Cell>
+    <Cell>6.0</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1801</Cell>
+  </Row>
+  <Row>
+    <Cell>24</Cell>
+    <Cell>Cr</Cell>
+    <Cell>Chromium</Cell>
+    <Cell>51.996</Cell>
+    <Cell>8A99C7</Cell>
+    <Cell>[Ar]3d5 4s1</Cell>
+    <Cell>1.66</Cell>
+    <Cell>189</Cell>
+    <Cell>6.767</Cell>
+    <Cell>0.666</Cell>
+    <Cell>+6, +3, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>2180</Cell>
+    <Cell>2944</Cell>
+    <Cell>7.15</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1797</Cell>
+  </Row>
+  <Row>
+    <Cell>25</Cell>
+    <Cell>Mn</Cell>
+    <Cell>Manganese</Cell>
+    <Cell>54.93804</Cell>
+    <Cell>9C7AC7</Cell>
+    <Cell>[Ar]4s2 3d5</Cell>
+    <Cell>1.55</Cell>
+    <Cell>197</Cell>
+    <Cell>7.434</Cell>
+    <Cell></Cell>
+    <Cell>+7, +4, +3, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1519</Cell>
+    <Cell>2334</Cell>
+    <Cell>7.3</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1774</Cell>
+  </Row>
+  <Row>
+    <Cell>26</Cell>
+    <Cell>Fe</Cell>
+    <Cell>Iron</Cell>
+    <Cell>55.84</Cell>
+    <Cell>E06633</Cell>
+    <Cell>[Ar]4s2 3d6</Cell>
+    <Cell>1.83</Cell>
+    <Cell>194</Cell>
+    <Cell>7.902</Cell>
+    <Cell>0.163</Cell>
+    <Cell>+3, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1811</Cell>
+    <Cell>3134</Cell>
+    <Cell>7.874</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>Ancient</Cell>
+  </Row>
+  <Row>
+    <Cell>27</Cell>
+    <Cell>Co</Cell>
+    <Cell>Cobalt</Cell>
+    <Cell>58.93319</Cell>
+    <Cell>F090A0</Cell>
+    <Cell>[Ar]4s2 3d7</Cell>
+    <Cell>1.88</Cell>
+    <Cell>192</Cell>
+    <Cell>7.881</Cell>
+    <Cell>0.661</Cell>
+    <Cell>+3, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1768</Cell>
+    <Cell>3200</Cell>
+    <Cell>8.86</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1735</Cell>
+  </Row>
+  <Row>
+    <Cell>28</Cell>
+    <Cell>Ni</Cell>
+    <Cell>Nickel</Cell>
+    <Cell>58.693</Cell>
+    <Cell>50D050</Cell>
+    <Cell>[Ar]4s2 3d8</Cell>
+    <Cell>1.91</Cell>
+    <Cell>163</Cell>
+    <Cell>7.640</Cell>
+    <Cell>1.156</Cell>
+    <Cell>+3, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1728</Cell>
+    <Cell>3186</Cell>
+    <Cell>8.912</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1751</Cell>
+  </Row>
+  <Row>
+    <Cell>29</Cell>
+    <Cell>Cu</Cell>
+    <Cell>Copper</Cell>
+    <Cell>63.55</Cell>
+    <Cell>C88033</Cell>
+    <Cell>[Ar]4s1 3d10</Cell>
+    <Cell>1.9</Cell>
+    <Cell>140</Cell>
+    <Cell>7.726</Cell>
+    <Cell>1.228</Cell>
+    <Cell>+2, +1</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1357.77</Cell>
+    <Cell>2835</Cell>
+    <Cell>8.933</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>Ancient</Cell>
+  </Row>
+  <Row>
+    <Cell>30</Cell>
+    <Cell>Zn</Cell>
+    <Cell>Zinc</Cell>
+    <Cell>65.4</Cell>
+    <Cell>7D80B0</Cell>
+    <Cell>[Ar]4s2 3d10</Cell>
+    <Cell>1.65</Cell>
+    <Cell>139</Cell>
+    <Cell>9.394</Cell>
+    <Cell></Cell>
+    <Cell>+2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>692.68</Cell>
+    <Cell>1180</Cell>
+    <Cell>7.134</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1746</Cell>
+  </Row>
+  <Row>
+    <Cell>31</Cell>
+    <Cell>Ga</Cell>
+    <Cell>Gallium</Cell>
+    <Cell>69.723</Cell>
+    <Cell>C28F8F</Cell>
+    <Cell>[Ar]4s2 3d10 4p1</Cell>
+    <Cell>1.81</Cell>
+    <Cell>187</Cell>
+    <Cell>5.999</Cell>
+    <Cell>0.3</Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>302.91</Cell>
+    <Cell>2477</Cell>
+    <Cell>5.91</Cell>
+    <Cell>Post-transition metal</Cell>
+    <Cell>1875</Cell>
+  </Row>
+  <Row>
+    <Cell>32</Cell>
+    <Cell>Ge</Cell>
+    <Cell>Germanium</Cell>
+    <Cell>72.63</Cell>
+    <Cell>668F8F</Cell>
+    <Cell>[Ar]4s2 3d10 4p2</Cell>
+    <Cell>2.01</Cell>
+    <Cell>211</Cell>
+    <Cell>7.900</Cell>
+    <Cell>1.35</Cell>
+    <Cell>+4, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1211.4</Cell>
+    <Cell>3106</Cell>
+    <Cell>5.323</Cell>
+    <Cell>Metalloid</Cell>
+    <Cell>1886</Cell>
+  </Row>
+  <Row>
+    <Cell>33</Cell>
+    <Cell>As</Cell>
+    <Cell>Arsenic</Cell>
+    <Cell>74.92159</Cell>
+    <Cell>BD80E3</Cell>
+    <Cell>[Ar]4s2 3d10 4p3</Cell>
+    <Cell>2.18</Cell>
+    <Cell>185</Cell>
+    <Cell>9.815</Cell>
+    <Cell>0.81</Cell>
+    <Cell>+5, +3, -3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1090</Cell>
+    <Cell>887</Cell>
+    <Cell>5.776</Cell>
+    <Cell>Metalloid</Cell>
+    <Cell>Ancient</Cell>
+  </Row>
+  <Row>
+    <Cell>34</Cell>
+    <Cell>Se</Cell>
+    <Cell>Selenium</Cell>
+    <Cell>78.97</Cell>
+    <Cell>FFA100</Cell>
+    <Cell>[Ar]4s2 3d10 4p4</Cell>
+    <Cell>2.55</Cell>
+    <Cell>190</Cell>
+    <Cell>9.752</Cell>
+    <Cell>2.021</Cell>
+    <Cell>+6, +4, -2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>493.65</Cell>
+    <Cell>958</Cell>
+    <Cell>4.809</Cell>
+    <Cell>Nonmetal</Cell>
+    <Cell>1817</Cell>
+  </Row>
+  <Row>
+    <Cell>35</Cell>
+    <Cell>Br</Cell>
+    <Cell>Bromine</Cell>
+    <Cell>79.90</Cell>
+    <Cell>A62929</Cell>
+    <Cell>[Ar]4s2 3d10 4p5</Cell>
+    <Cell>2.96</Cell>
+    <Cell>183</Cell>
+    <Cell>11.814</Cell>
+    <Cell>3.365</Cell>
+    <Cell>+5, +1, -1</Cell>
+    <Cell>Liquid</Cell>
+    <Cell>265.95</Cell>
+    <Cell>331.95</Cell>
+    <Cell>3.11</Cell>
+    <Cell>Halogen</Cell>
+    <Cell>1826</Cell>
+  </Row>
+  <Row>
+    <Cell>36</Cell>
+    <Cell>Kr</Cell>
+    <Cell>Krypton</Cell>
+    <Cell>83.80</Cell>
+    <Cell>5CB8D1</Cell>
+    <Cell>[Ar]4s2 3d10 4p6</Cell>
+    <Cell>3</Cell>
+    <Cell>202</Cell>
+    <Cell>14.000</Cell>
+    <Cell></Cell>
+    <Cell>0</Cell>
+    <Cell>Gas</Cell>
+    <Cell>115.79</Cell>
+    <Cell>119.93</Cell>
+    <Cell>0.003733</Cell>
+    <Cell>Noble gas</Cell>
+    <Cell>1898</Cell>
+  </Row>
+  <Row>
+    <Cell>37</Cell>
+    <Cell>Rb</Cell>
+    <Cell>Rubidium</Cell>
+    <Cell>85.468</Cell>
+    <Cell>702EB0</Cell>
+    <Cell>[Kr]5s1</Cell>
+    <Cell>0.82</Cell>
+    <Cell>303</Cell>
+    <Cell>4.177</Cell>
+    <Cell>0.468</Cell>
+    <Cell>+1</Cell>
+    <Cell>Solid</Cell>
+    <Cell>312.46</Cell>
+    <Cell>961</Cell>
+    <Cell>1.53</Cell>
+    <Cell>Alkali metal</Cell>
+    <Cell>1861</Cell>
+  </Row>
+  <Row>
+    <Cell>38</Cell>
+    <Cell>Sr</Cell>
+    <Cell>Strontium</Cell>
+    <Cell>87.62</Cell>
+    <Cell>00FF00</Cell>
+    <Cell>[Kr]5s2</Cell>
+    <Cell>0.95</Cell>
+    <Cell>249</Cell>
+    <Cell>5.695</Cell>
+    <Cell></Cell>
+    <Cell>+2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1050</Cell>
+    <Cell>1655</Cell>
+    <Cell>2.64</Cell>
+    <Cell>Alkaline earth metal</Cell>
+    <Cell>1790</Cell>
+  </Row>
+  <Row>
+    <Cell>39</Cell>
+    <Cell>Y</Cell>
+    <Cell>Yttrium</Cell>
+    <Cell>88.90584</Cell>
+    <Cell>94FFFF</Cell>
+    <Cell>[Kr]5s2 4d1</Cell>
+    <Cell>1.22</Cell>
+    <Cell>219</Cell>
+    <Cell>6.217</Cell>
+    <Cell>0.307</Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1795</Cell>
+    <Cell>3618</Cell>
+    <Cell>4.47</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1794</Cell>
+  </Row>
+  <Row>
+    <Cell>40</Cell>
+    <Cell>Zr</Cell>
+    <Cell>Zirconium</Cell>
+    <Cell>91.22</Cell>
+    <Cell>94E0E0</Cell>
+    <Cell>[Kr]5s2 4d2</Cell>
+    <Cell>1.33</Cell>
+    <Cell>186</Cell>
+    <Cell>6.634</Cell>
+    <Cell>0.426</Cell>
+    <Cell>+4</Cell>
+    <Cell>Solid</Cell>
+    <Cell>2128</Cell>
+    <Cell>4682</Cell>
+    <Cell>6.52</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1789</Cell>
+  </Row>
+  <Row>
+    <Cell>41</Cell>
+    <Cell>Nb</Cell>
+    <Cell>Niobium</Cell>
+    <Cell>92.90637</Cell>
+    <Cell>73C2C9</Cell>
+    <Cell>[Kr]5s1 4d4</Cell>
+    <Cell>1.6</Cell>
+    <Cell>207</Cell>
+    <Cell>6.759</Cell>
+    <Cell>0.893</Cell>
+    <Cell>+5, +3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>2750</Cell>
+    <Cell>5017</Cell>
+    <Cell>8.57</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1801</Cell>
+  </Row>
+  <Row>
+    <Cell>42</Cell>
+    <Cell>Mo</Cell>
+    <Cell>Molybdenum</Cell>
+    <Cell>95.95</Cell>
+    <Cell>54B5B5</Cell>
+    <Cell>[Kr]5s1 4d5</Cell>
+    <Cell>2.16</Cell>
+    <Cell>209</Cell>
+    <Cell>7.092</Cell>
+    <Cell>0.746</Cell>
+    <Cell>+6</Cell>
+    <Cell>Solid</Cell>
+    <Cell>2896</Cell>
+    <Cell>4912</Cell>
+    <Cell>10.2</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1778</Cell>
+  </Row>
+  <Row>
+    <Cell>43</Cell>
+    <Cell>Tc</Cell>
+    <Cell>Technetium</Cell>
+    <Cell>96.90636</Cell>
+    <Cell>3B9E9E</Cell>
+    <Cell>[Kr]5s2 4d5</Cell>
+    <Cell>1.9</Cell>
+    <Cell>209</Cell>
+    <Cell>7.28</Cell>
+    <Cell>0.55</Cell>
+    <Cell>+7, +6, +4</Cell>
+    <Cell>Solid</Cell>
+    <Cell>2430</Cell>
+    <Cell>4538</Cell>
+    <Cell>11</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1937</Cell>
+  </Row>
+  <Row>
+    <Cell>44</Cell>
+    <Cell>Ru</Cell>
+    <Cell>Ruthenium</Cell>
+    <Cell>101.1</Cell>
+    <Cell>248F8F</Cell>
+    <Cell>[Kr]5s1 4d7</Cell>
+    <Cell>2.2</Cell>
+    <Cell>207</Cell>
+    <Cell>7.361</Cell>
+    <Cell>1.05</Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>2607</Cell>
+    <Cell>4423</Cell>
+    <Cell>12.1</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1827</Cell>
+  </Row>
+  <Row>
+    <Cell>45</Cell>
+    <Cell>Rh</Cell>
+    <Cell>Rhodium</Cell>
+    <Cell>102.9055</Cell>
+    <Cell>0A7D8C</Cell>
+    <Cell>[Kr]5s1 4d8</Cell>
+    <Cell>2.28</Cell>
+    <Cell>195</Cell>
+    <Cell>7.459</Cell>
+    <Cell>1.137</Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>2237</Cell>
+    <Cell>3968</Cell>
+    <Cell>12.4</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1803</Cell>
+  </Row>
+  <Row>
+    <Cell>46</Cell>
+    <Cell>Pd</Cell>
+    <Cell>Palladium</Cell>
+    <Cell>106.42</Cell>
+    <Cell>6985</Cell>
+    <Cell>[Kr]4d10</Cell>
+    <Cell>2.2</Cell>
+    <Cell>202</Cell>
+    <Cell>8.337</Cell>
+    <Cell>0.557</Cell>
+    <Cell>+3, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1828.05</Cell>
+    <Cell>3236</Cell>
+    <Cell>12.0</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1803</Cell>
+  </Row>
+  <Row>
+    <Cell>47</Cell>
+    <Cell>Ag</Cell>
+    <Cell>Silver</Cell>
+    <Cell>107.868</Cell>
+    <Cell>C0C0C0</Cell>
+    <Cell>[Kr]5s1 4d10</Cell>
+    <Cell>1.93</Cell>
+    <Cell>172</Cell>
+    <Cell>7.576</Cell>
+    <Cell>1.302</Cell>
+    <Cell>+1</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1234.93</Cell>
+    <Cell>2435</Cell>
+    <Cell>10.501</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>Ancient</Cell>
+  </Row>
+  <Row>
+    <Cell>48</Cell>
+    <Cell>Cd</Cell>
+    <Cell>Cadmium</Cell>
+    <Cell>112.41</Cell>
+    <Cell>FFD98F</Cell>
+    <Cell>[Kr]5s2 4d10</Cell>
+    <Cell>1.69</Cell>
+    <Cell>158</Cell>
+    <Cell>8.994</Cell>
+    <Cell></Cell>
+    <Cell>+2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>594.22</Cell>
+    <Cell>1040</Cell>
+    <Cell>8.69</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1817</Cell>
+  </Row>
+  <Row>
+    <Cell>49</Cell>
+    <Cell>In</Cell>
+    <Cell>Indium</Cell>
+    <Cell>114.818</Cell>
+    <Cell>A67573</Cell>
+    <Cell>[Kr]5s2 4d10 5p1</Cell>
+    <Cell>1.78</Cell>
+    <Cell>193</Cell>
+    <Cell>5.786</Cell>
+    <Cell>0.3</Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>429.75</Cell>
+    <Cell>2345</Cell>
+    <Cell>7.31</Cell>
+    <Cell>Post-transition metal</Cell>
+    <Cell>1863</Cell>
+  </Row>
+  <Row>
+    <Cell>50</Cell>
+    <Cell>Sn</Cell>
+    <Cell>Tin</Cell>
+    <Cell>118.71</Cell>
+    <Cell>668080</Cell>
+    <Cell>[Kr]5s2 4d10 5p2</Cell>
+    <Cell>1.96</Cell>
+    <Cell>217</Cell>
+    <Cell>7.344</Cell>
+    <Cell>1.2</Cell>
+    <Cell>+4, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>505.08</Cell>
+    <Cell>2875</Cell>
+    <Cell>7.287</Cell>
+    <Cell>Post-transition metal</Cell>
+    <Cell>Ancient</Cell>
+  </Row>
+  <Row>
+    <Cell>51</Cell>
+    <Cell>Sb</Cell>
+    <Cell>Antimony</Cell>
+    <Cell>121.760</Cell>
+    <Cell>9E63B5</Cell>
+    <Cell>[Kr]5s2 4d10 5p3</Cell>
+    <Cell>2.05</Cell>
+    <Cell>206</Cell>
+    <Cell>8.64</Cell>
+    <Cell>1.07</Cell>
+    <Cell>+5, +3, -3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>903.78</Cell>
+    <Cell>1860</Cell>
+    <Cell>6.685</Cell>
+    <Cell>Metalloid</Cell>
+    <Cell>Ancient</Cell>
+  </Row>
+  <Row>
+    <Cell>52</Cell>
+    <Cell>Te</Cell>
+    <Cell>Tellurium</Cell>
+    <Cell>127.6</Cell>
+    <Cell>D47A00</Cell>
+    <Cell>[Kr]5s2 4d10 5p4</Cell>
+    <Cell>2.1</Cell>
+    <Cell>206</Cell>
+    <Cell>9.010</Cell>
+    <Cell>1.971</Cell>
+    <Cell>+6, +4, -2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>722.66</Cell>
+    <Cell>1261</Cell>
+    <Cell>6.232</Cell>
+    <Cell>Metalloid</Cell>
+    <Cell>1782</Cell>
+  </Row>
+  <Row>
+    <Cell>53</Cell>
+    <Cell>I</Cell>
+    <Cell>Iodine</Cell>
+    <Cell>126.9045</Cell>
+    <Cell>940094</Cell>
+    <Cell>[Kr]5s2 4d10 5p5</Cell>
+    <Cell>2.66</Cell>
+    <Cell>198</Cell>
+    <Cell>10.451</Cell>
+    <Cell>3.059</Cell>
+    <Cell>+7, +5, +1, -1</Cell>
+    <Cell>Solid</Cell>
+    <Cell>386.85</Cell>
+    <Cell>457.55</Cell>
+    <Cell>4.93</Cell>
+    <Cell>Halogen</Cell>
+    <Cell>1811</Cell>
+  </Row>
+  <Row>
+    <Cell>54</Cell>
+    <Cell>Xe</Cell>
+    <Cell>Xenon</Cell>
+    <Cell>131.29</Cell>
+    <Cell>429EB0</Cell>
+    <Cell>[Kr]5s2 4d10 5p6</Cell>
+    <Cell>2.6</Cell>
+    <Cell>216</Cell>
+    <Cell>12.130</Cell>
+    <Cell></Cell>
+    <Cell>0</Cell>
+    <Cell>Gas</Cell>
+    <Cell>161.36</Cell>
+    <Cell>165.03</Cell>
+    <Cell>0.005887</Cell>
+    <Cell>Noble gas</Cell>
+    <Cell>1898</Cell>
+  </Row>
+  <Row>
+    <Cell>55</Cell>
+    <Cell>Cs</Cell>
+    <Cell>Cesium</Cell>
+    <Cell>132.9054520</Cell>
+    <Cell>57178F</Cell>
+    <Cell>[Xe]6s1</Cell>
+    <Cell>0.79</Cell>
+    <Cell>343</Cell>
+    <Cell>3.894</Cell>
+    <Cell>0.472</Cell>
+    <Cell>+1</Cell>
+    <Cell>Solid</Cell>
+    <Cell>301.59</Cell>
+    <Cell>944</Cell>
+    <Cell>1.93</Cell>
+    <Cell>Alkali metal</Cell>
+    <Cell>1860</Cell>
+  </Row>
+  <Row>
+    <Cell>56</Cell>
+    <Cell>Ba</Cell>
+    <Cell>Barium</Cell>
+    <Cell>137.33</Cell>
+    <Cell>00C900</Cell>
+    <Cell>[Xe]6s2</Cell>
+    <Cell>0.89</Cell>
+    <Cell>268</Cell>
+    <Cell>5.212</Cell>
+    <Cell></Cell>
+    <Cell>+2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1000</Cell>
+    <Cell>2170</Cell>
+    <Cell>3.62</Cell>
+    <Cell>Alkaline earth metal</Cell>
+    <Cell>1808</Cell>
+  </Row>
+  <Row>
+    <Cell>57</Cell>
+    <Cell>La</Cell>
+    <Cell>Lanthanum</Cell>
+    <Cell>138.9055</Cell>
+    <Cell>70D4FF</Cell>
+    <Cell>[Xe]6s2 5d1</Cell>
+    <Cell>1.1</Cell>
+    <Cell>240</Cell>
+    <Cell>5.577</Cell>
+    <Cell>0.5</Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1191</Cell>
+    <Cell>3737</Cell>
+    <Cell>6.15</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1839</Cell>
+  </Row>
+  <Row>
+    <Cell>58</Cell>
+    <Cell>Ce</Cell>
+    <Cell>Cerium</Cell>
+    <Cell>140.116</Cell>
+    <Cell>FFFFC7</Cell>
+    <Cell>[Xe]6s2 4f1 5d1</Cell>
+    <Cell>1.12</Cell>
+    <Cell>235</Cell>
+    <Cell>5.539</Cell>
+    <Cell>0.5</Cell>
+    <Cell>+4, +3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1071</Cell>
+    <Cell>3697</Cell>
+    <Cell>6.770</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1803</Cell>
+  </Row>
+  <Row>
+    <Cell>59</Cell>
+    <Cell>Pr</Cell>
+    <Cell>Praseodymium</Cell>
+    <Cell>140.90766</Cell>
+    <Cell>D9FFC7</Cell>
+    <Cell>[Xe]6s2 4f3</Cell>
+    <Cell>1.13</Cell>
+    <Cell>239</Cell>
+    <Cell>5.464</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1204</Cell>
+    <Cell>3793</Cell>
+    <Cell>6.77</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1885</Cell>
+  </Row>
+  <Row>
+    <Cell>60</Cell>
+    <Cell>Nd</Cell>
+    <Cell>Neodymium</Cell>
+    <Cell>144.24</Cell>
+    <Cell>C7FFC7</Cell>
+    <Cell>[Xe]6s2 4f4</Cell>
+    <Cell>1.14</Cell>
+    <Cell>229</Cell>
+    <Cell>5.525</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1294</Cell>
+    <Cell>3347</Cell>
+    <Cell>7.01</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1885</Cell>
+  </Row>
+  <Row>
+    <Cell>61</Cell>
+    <Cell>Pm</Cell>
+    <Cell>Promethium</Cell>
+    <Cell>144.91276</Cell>
+    <Cell>A3FFC7</Cell>
+    <Cell>[Xe]6s2 4f5</Cell>
+    <Cell></Cell>
+    <Cell>236</Cell>
+    <Cell>5.55</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1315</Cell>
+    <Cell>3273</Cell>
+    <Cell>7.26</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1945</Cell>
+  </Row>
+  <Row>
+    <Cell>62</Cell>
+    <Cell>Sm</Cell>
+    <Cell>Samarium</Cell>
+    <Cell>150.4</Cell>
+    <Cell>8FFFC7</Cell>
+    <Cell>[Xe]6s2 4f6</Cell>
+    <Cell>1.17</Cell>
+    <Cell>229</Cell>
+    <Cell>5.644</Cell>
+    <Cell></Cell>
+    <Cell>+3, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1347</Cell>
+    <Cell>2067</Cell>
+    <Cell>7.52</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1879</Cell>
+  </Row>
+  <Row>
+    <Cell>63</Cell>
+    <Cell>Eu</Cell>
+    <Cell>Europium</Cell>
+    <Cell>151.964</Cell>
+    <Cell>61FFC7</Cell>
+    <Cell>[Xe]6s2 4f7</Cell>
+    <Cell></Cell>
+    <Cell>233</Cell>
+    <Cell>5.670</Cell>
+    <Cell></Cell>
+    <Cell>+3, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1095</Cell>
+    <Cell>1802</Cell>
+    <Cell>5.24</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1901</Cell>
+  </Row>
+  <Row>
+    <Cell>64</Cell>
+    <Cell>Gd</Cell>
+    <Cell>Gadolinium</Cell>
+    <Cell>157.2</Cell>
+    <Cell>45FFC7</Cell>
+    <Cell>[Xe]6s2 4f7 5d1</Cell>
+    <Cell>1.2</Cell>
+    <Cell>237</Cell>
+    <Cell>6.150</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1586</Cell>
+    <Cell>3546</Cell>
+    <Cell>7.90</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1880</Cell>
+  </Row>
+  <Row>
+    <Cell>65</Cell>
+    <Cell>Tb</Cell>
+    <Cell>Terbium</Cell>
+    <Cell>158.92535</Cell>
+    <Cell>30FFC7</Cell>
+    <Cell>[Xe]6s2 4f9</Cell>
+    <Cell></Cell>
+    <Cell>221</Cell>
+    <Cell>5.864</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1629</Cell>
+    <Cell>3503</Cell>
+    <Cell>8.23</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1843</Cell>
+  </Row>
+  <Row>
+    <Cell>66</Cell>
+    <Cell>Dy</Cell>
+    <Cell>Dysprosium</Cell>
+    <Cell>162.500</Cell>
+    <Cell>1FFFC7</Cell>
+    <Cell>[Xe]6s2 4f10</Cell>
+    <Cell>1.22</Cell>
+    <Cell>229</Cell>
+    <Cell>5.939</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1685</Cell>
+    <Cell>2840</Cell>
+    <Cell>8.55</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1886</Cell>
+  </Row>
+  <Row>
+    <Cell>67</Cell>
+    <Cell>Ho</Cell>
+    <Cell>Holmium</Cell>
+    <Cell>164.93033</Cell>
+    <Cell>00FF9C</Cell>
+    <Cell>[Xe]6s2 4f11</Cell>
+    <Cell>1.23</Cell>
+    <Cell>216</Cell>
+    <Cell>6.022</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1747</Cell>
+    <Cell>2973</Cell>
+    <Cell>8.80</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1878</Cell>
+  </Row>
+  <Row>
+    <Cell>68</Cell>
+    <Cell>Er</Cell>
+    <Cell>Erbium</Cell>
+    <Cell>167.26</Cell>
+    <Cell></Cell>
+    <Cell>[Xe]6s2 4f12</Cell>
+    <Cell>1.24</Cell>
+    <Cell>235</Cell>
+    <Cell>6.108</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1802</Cell>
+    <Cell>3141</Cell>
+    <Cell>9.07</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1843</Cell>
+  </Row>
+  <Row>
+    <Cell>69</Cell>
+    <Cell>Tm</Cell>
+    <Cell>Thulium</Cell>
+    <Cell>168.93422</Cell>
+    <Cell>00D452</Cell>
+    <Cell>[Xe]6s2 4f13</Cell>
+    <Cell>1.25</Cell>
+    <Cell>227</Cell>
+    <Cell>6.184</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1818</Cell>
+    <Cell>2223</Cell>
+    <Cell>9.32</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1879</Cell>
+  </Row>
+  <Row>
+    <Cell>70</Cell>
+    <Cell>Yb</Cell>
+    <Cell>Ytterbium</Cell>
+    <Cell>173.05</Cell>
+    <Cell>00BF38</Cell>
+    <Cell>[Xe]6s2 4f14</Cell>
+    <Cell></Cell>
+    <Cell>242</Cell>
+    <Cell>6.254</Cell>
+    <Cell></Cell>
+    <Cell>+3, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1092</Cell>
+    <Cell>1469</Cell>
+    <Cell>6.90</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1878</Cell>
+  </Row>
+  <Row>
+    <Cell>71</Cell>
+    <Cell>Lu</Cell>
+    <Cell>Lutetium</Cell>
+    <Cell>174.9668</Cell>
+    <Cell>00AB24</Cell>
+    <Cell>[Xe]6s2 4f14 5d1</Cell>
+    <Cell>1.27</Cell>
+    <Cell>221</Cell>
+    <Cell>5.426</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1936</Cell>
+    <Cell>3675</Cell>
+    <Cell>9.84</Cell>
+    <Cell>Lanthanide</Cell>
+    <Cell>1907</Cell>
+  </Row>
+  <Row>
+    <Cell>72</Cell>
+    <Cell>Hf</Cell>
+    <Cell>Hafnium</Cell>
+    <Cell>178.49</Cell>
+    <Cell>4DC2FF</Cell>
+    <Cell>[Xe]6s2 4f14 5d2</Cell>
+    <Cell>1.3</Cell>
+    <Cell>212</Cell>
+    <Cell>6.825</Cell>
+    <Cell></Cell>
+    <Cell>+4</Cell>
+    <Cell>Solid</Cell>
+    <Cell>2506</Cell>
+    <Cell>4876</Cell>
+    <Cell>13.3</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1923</Cell>
+  </Row>
+  <Row>
+    <Cell>73</Cell>
+    <Cell>Ta</Cell>
+    <Cell>Tantalum</Cell>
+    <Cell>180.9479</Cell>
+    <Cell>4DA6FF</Cell>
+    <Cell>[Xe]6s2 4f14 5d3</Cell>
+    <Cell>1.5</Cell>
+    <Cell>217</Cell>
+    <Cell>7.89</Cell>
+    <Cell>0.322</Cell>
+    <Cell>+5</Cell>
+    <Cell>Solid</Cell>
+    <Cell>3290</Cell>
+    <Cell>5731</Cell>
+    <Cell>16.4</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1802</Cell>
+  </Row>
+  <Row>
+    <Cell>74</Cell>
+    <Cell>W</Cell>
+    <Cell>Tungsten</Cell>
+    <Cell>183.84</Cell>
+    <Cell>2194D6</Cell>
+    <Cell>[Xe]6s2 4f14 5d4</Cell>
+    <Cell>2.36</Cell>
+    <Cell>210</Cell>
+    <Cell>7.98</Cell>
+    <Cell>0.815</Cell>
+    <Cell>+6</Cell>
+    <Cell>Solid</Cell>
+    <Cell>3695</Cell>
+    <Cell>5828</Cell>
+    <Cell>19.3</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1783</Cell>
+  </Row>
+  <Row>
+    <Cell>75</Cell>
+    <Cell>Re</Cell>
+    <Cell>Rhenium</Cell>
+    <Cell>186.207</Cell>
+    <Cell>267DAB</Cell>
+    <Cell>[Xe]6s2 4f14 5d5</Cell>
+    <Cell>1.9</Cell>
+    <Cell>217</Cell>
+    <Cell>7.88</Cell>
+    <Cell>0.15</Cell>
+    <Cell>+7, +6, +4</Cell>
+    <Cell>Solid</Cell>
+    <Cell>3459</Cell>
+    <Cell>5869</Cell>
+    <Cell>20.8</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1925</Cell>
+  </Row>
+  <Row>
+    <Cell>76</Cell>
+    <Cell>Os</Cell>
+    <Cell>Osmium</Cell>
+    <Cell>190.2</Cell>
+    <Cell>266696</Cell>
+    <Cell>[Xe]6s2 4f14 5d6</Cell>
+    <Cell>2.2</Cell>
+    <Cell>216</Cell>
+    <Cell>8.7</Cell>
+    <Cell>1.1</Cell>
+    <Cell>+4, +3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>3306</Cell>
+    <Cell>5285</Cell>
+    <Cell>22.57</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1803</Cell>
+  </Row>
+  <Row>
+    <Cell>77</Cell>
+    <Cell>Ir</Cell>
+    <Cell>Iridium</Cell>
+    <Cell>192.22</Cell>
+    <Cell>175487</Cell>
+    <Cell>[Xe]6s2 4f14 5d7</Cell>
+    <Cell>2.2</Cell>
+    <Cell>202</Cell>
+    <Cell>9.1</Cell>
+    <Cell>1.565</Cell>
+    <Cell>+4, +3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>2719</Cell>
+    <Cell>4701</Cell>
+    <Cell>22.42</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1803</Cell>
+  </Row>
+  <Row>
+    <Cell>78</Cell>
+    <Cell>Pt</Cell>
+    <Cell>Platinum</Cell>
+    <Cell>195.08</Cell>
+    <Cell>D0D0E0</Cell>
+    <Cell>[Xe]6s1 4f14 5d9</Cell>
+    <Cell>2.28</Cell>
+    <Cell>209</Cell>
+    <Cell>9</Cell>
+    <Cell>2.128</Cell>
+    <Cell>+4, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>2041.55</Cell>
+    <Cell>4098</Cell>
+    <Cell>21.46</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1735</Cell>
+  </Row>
+  <Row>
+    <Cell>79</Cell>
+    <Cell>Au</Cell>
+    <Cell>Gold</Cell>
+    <Cell>196.96657</Cell>
+    <Cell>FFD123</Cell>
+    <Cell>[Xe]6s1 4f14 5d10</Cell>
+    <Cell>2.54</Cell>
+    <Cell>166</Cell>
+    <Cell>9.226</Cell>
+    <Cell>2.309</Cell>
+    <Cell>+3, +1</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1337.33</Cell>
+    <Cell>3129</Cell>
+    <Cell>19.282</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>Ancient</Cell>
+  </Row>
+  <Row>
+    <Cell>80</Cell>
+    <Cell>Hg</Cell>
+    <Cell>Mercury</Cell>
+    <Cell>200.59</Cell>
+    <Cell>B8B8D0</Cell>
+    <Cell>[Xe]6s2 4f14 5d10</Cell>
+    <Cell>2</Cell>
+    <Cell>209</Cell>
+    <Cell>10.438</Cell>
+    <Cell></Cell>
+    <Cell>+2, +1</Cell>
+    <Cell>Liquid</Cell>
+    <Cell>234.32</Cell>
+    <Cell>629.88</Cell>
+    <Cell>13.5336</Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>Ancient</Cell>
+  </Row>
+  <Row>
+    <Cell>81</Cell>
+    <Cell>Tl</Cell>
+    <Cell>Thallium</Cell>
+    <Cell>204.383</Cell>
+    <Cell>A6544D</Cell>
+    <Cell>[Xe]6s2 4f14 5d10 6p1</Cell>
+    <Cell>1.62</Cell>
+    <Cell>196</Cell>
+    <Cell>6.108</Cell>
+    <Cell>0.2</Cell>
+    <Cell>+3, +1</Cell>
+    <Cell>Solid</Cell>
+    <Cell>577</Cell>
+    <Cell>1746</Cell>
+    <Cell>11.8</Cell>
+    <Cell>Post-transition metal</Cell>
+    <Cell>1861</Cell>
+  </Row>
+  <Row>
+    <Cell>82</Cell>
+    <Cell>Pb</Cell>
+    <Cell>Lead</Cell>
+    <Cell>207</Cell>
+    <Cell>575961</Cell>
+    <Cell>[Xe]6s2 4f14 5d10 6p2</Cell>
+    <Cell>2.33</Cell>
+    <Cell>202</Cell>
+    <Cell>7.417</Cell>
+    <Cell>0.36</Cell>
+    <Cell>+4, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>600.61</Cell>
+    <Cell>2022</Cell>
+    <Cell>11.342</Cell>
+    <Cell>Post-transition metal</Cell>
+    <Cell>Ancient</Cell>
+  </Row>
+  <Row>
+    <Cell>83</Cell>
+    <Cell>Bi</Cell>
+    <Cell>Bismuth</Cell>
+    <Cell>208.98040</Cell>
+    <Cell>9E4FB5</Cell>
+    <Cell>[Xe]6s2 4f14 5d10 6p3</Cell>
+    <Cell>2.02</Cell>
+    <Cell>207</Cell>
+    <Cell>7.289</Cell>
+    <Cell>0.946</Cell>
+    <Cell>+5, +3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>544.55</Cell>
+    <Cell>1837</Cell>
+    <Cell>9.807</Cell>
+    <Cell>Post-transition metal</Cell>
+    <Cell>1753</Cell>
+  </Row>
+  <Row>
+    <Cell>84</Cell>
+    <Cell>Po</Cell>
+    <Cell>Polonium</Cell>
+    <Cell>208.98243</Cell>
+    <Cell>AB5C00</Cell>
+    <Cell>[Xe]6s2 4f14 5d10 6p4</Cell>
+    <Cell>2</Cell>
+    <Cell>197</Cell>
+    <Cell>8.417</Cell>
+    <Cell>1.9</Cell>
+    <Cell>+4, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>527</Cell>
+    <Cell>1235</Cell>
+    <Cell>9.32</Cell>
+    <Cell>Metalloid</Cell>
+    <Cell>1898</Cell>
+  </Row>
+  <Row>
+    <Cell>85</Cell>
+    <Cell>At</Cell>
+    <Cell>Astatine</Cell>
+    <Cell>209.98715</Cell>
+    <Cell>754F45</Cell>
+    <Cell>[Xe]6s2 4f14 5d10 6p5</Cell>
+    <Cell>2.2</Cell>
+    <Cell>202</Cell>
+    <Cell>9.5</Cell>
+    <Cell>2.8</Cell>
+    <Cell>7, 5, 3, 1, -1</Cell>
+    <Cell>Solid</Cell>
+    <Cell>575</Cell>
+    <Cell></Cell>
+    <Cell>7</Cell>
+    <Cell>Halogen</Cell>
+    <Cell>1940</Cell>
+  </Row>
+  <Row>
+    <Cell>86</Cell>
+    <Cell>Rn</Cell>
+    <Cell>Radon</Cell>
+    <Cell>222.01758</Cell>
+    <Cell>428296</Cell>
+    <Cell>[Xe]6s2 4f14 5d10 6p6</Cell>
+    <Cell></Cell>
+    <Cell>220</Cell>
+    <Cell>10.745</Cell>
+    <Cell></Cell>
+    <Cell>0</Cell>
+    <Cell>Gas</Cell>
+    <Cell>202</Cell>
+    <Cell>211.45</Cell>
+    <Cell>0.00973</Cell>
+    <Cell>Noble gas</Cell>
+    <Cell>1900</Cell>
+  </Row>
+  <Row>
+    <Cell>87</Cell>
+    <Cell>Fr</Cell>
+    <Cell>Francium</Cell>
+    <Cell>223.01973</Cell>
+    <Cell>420066</Cell>
+    <Cell>[Rn]7s1</Cell>
+    <Cell>0.7</Cell>
+    <Cell>348</Cell>
+    <Cell>3.9</Cell>
+    <Cell>0.47</Cell>
+    <Cell>+1</Cell>
+    <Cell>Solid</Cell>
+    <Cell>300</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Alkali metal</Cell>
+    <Cell>1939</Cell>
+  </Row>
+  <Row>
+    <Cell>88</Cell>
+    <Cell>Ra</Cell>
+    <Cell>Radium</Cell>
+    <Cell>226.02541</Cell>
+    <Cell>007D00</Cell>
+    <Cell>[Rn]7s2</Cell>
+    <Cell>0.9</Cell>
+    <Cell>283</Cell>
+    <Cell>5.279</Cell>
+    <Cell></Cell>
+    <Cell>+2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>973</Cell>
+    <Cell>1413</Cell>
+    <Cell>5</Cell>
+    <Cell>Alkaline earth metal</Cell>
+    <Cell>1898</Cell>
+  </Row>
+  <Row>
+    <Cell>89</Cell>
+    <Cell>Ac</Cell>
+    <Cell>Actinium</Cell>
+    <Cell>227.02775</Cell>
+    <Cell>70ABFA</Cell>
+    <Cell>[Rn]7s2 6d1</Cell>
+    <Cell>1.1</Cell>
+    <Cell>260</Cell>
+    <Cell>5.17</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1324</Cell>
+    <Cell>3471</Cell>
+    <Cell>10.07</Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1899</Cell>
+  </Row>
+  <Row>
+    <Cell>90</Cell>
+    <Cell>Th</Cell>
+    <Cell>Thorium</Cell>
+    <Cell>232.038</Cell>
+    <Cell>00BAFF</Cell>
+    <Cell>[Rn]7s2 6d2</Cell>
+    <Cell>1.3</Cell>
+    <Cell>237</Cell>
+    <Cell>6.08</Cell>
+    <Cell></Cell>
+    <Cell>+4</Cell>
+    <Cell>Solid</Cell>
+    <Cell>2023</Cell>
+    <Cell>5061</Cell>
+    <Cell>11.72</Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1828</Cell>
+  </Row>
+  <Row>
+    <Cell>91</Cell>
+    <Cell>Pa</Cell>
+    <Cell>Protactinium</Cell>
+    <Cell>231.03588</Cell>
+    <Cell>00A1FF</Cell>
+    <Cell>[Rn]7s2 5f2 6d1</Cell>
+    <Cell>1.5</Cell>
+    <Cell>243</Cell>
+    <Cell>5.89</Cell>
+    <Cell></Cell>
+    <Cell>+5, +4</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1845</Cell>
+    <Cell></Cell>
+    <Cell>15.37</Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1913</Cell>
+  </Row>
+  <Row>
+    <Cell>92</Cell>
+    <Cell>U</Cell>
+    <Cell>Uranium</Cell>
+    <Cell>238.0289</Cell>
+    <Cell>008FFF</Cell>
+    <Cell>[Rn]7s2 5f3 6d1</Cell>
+    <Cell>1.38</Cell>
+    <Cell>240</Cell>
+    <Cell>6.194</Cell>
+    <Cell></Cell>
+    <Cell>+6, +5, +4, +3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1408</Cell>
+    <Cell>4404</Cell>
+    <Cell>18.95</Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1789</Cell>
+  </Row>
+  <Row>
+    <Cell>93</Cell>
+    <Cell>Np</Cell>
+    <Cell>Neptunium</Cell>
+    <Cell>237.048172</Cell>
+    <Cell>0080FF</Cell>
+    <Cell>[Rn]7s2 5f4 6d1</Cell>
+    <Cell>1.36</Cell>
+    <Cell>221</Cell>
+    <Cell>6.266</Cell>
+    <Cell></Cell>
+    <Cell>+6, +5, +4, +3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>917</Cell>
+    <Cell>4175</Cell>
+    <Cell>20.25</Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1940</Cell>
+  </Row>
+  <Row>
+    <Cell>94</Cell>
+    <Cell>Pu</Cell>
+    <Cell>Plutonium</Cell>
+    <Cell>244.06420</Cell>
+    <Cell>006BFF</Cell>
+    <Cell>[Rn]7s2 5f6</Cell>
+    <Cell>1.28</Cell>
+    <Cell>243</Cell>
+    <Cell>6.06</Cell>
+    <Cell></Cell>
+    <Cell>+6, +5, +4, +3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>913</Cell>
+    <Cell>3501</Cell>
+    <Cell>19.84</Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1940</Cell>
+  </Row>
+  <Row>
+    <Cell>95</Cell>
+    <Cell>Am</Cell>
+    <Cell>Americium</Cell>
+    <Cell>243.061380</Cell>
+    <Cell>545CF2</Cell>
+    <Cell>[Rn]7s2 5f7</Cell>
+    <Cell>1.3</Cell>
+    <Cell>244</Cell>
+    <Cell>5.993</Cell>
+    <Cell></Cell>
+    <Cell>+6, +5, +4, +3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1449</Cell>
+    <Cell>2284</Cell>
+    <Cell>13.69</Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1944</Cell>
+  </Row>
+  <Row>
+    <Cell>96</Cell>
+    <Cell>Cm</Cell>
+    <Cell>Curium</Cell>
+    <Cell>247.07035</Cell>
+    <Cell>785CE3</Cell>
+    <Cell>[Rn]7s2 5f7 6d1</Cell>
+    <Cell>1.3</Cell>
+    <Cell>245</Cell>
+    <Cell>6.02</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1618</Cell>
+    <Cell>3400</Cell>
+    <Cell>13.51</Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1944</Cell>
+  </Row>
+  <Row>
+    <Cell>97</Cell>
+    <Cell>Bk</Cell>
+    <Cell>Berkelium</Cell>
+    <Cell>247.07031</Cell>
+    <Cell>8A4FE3</Cell>
+    <Cell>[Rn]7s2 5f9</Cell>
+    <Cell>1.3</Cell>
+    <Cell>244</Cell>
+    <Cell>6.23</Cell>
+    <Cell></Cell>
+    <Cell>+4, +3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1323</Cell>
+    <Cell></Cell>
+    <Cell>14</Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1949</Cell>
+  </Row>
+  <Row>
+    <Cell>98</Cell>
+    <Cell>Cf</Cell>
+    <Cell>Californium</Cell>
+    <Cell>251.07959</Cell>
+    <Cell>A136D4</Cell>
+    <Cell>[Rn]7s2 5f10</Cell>
+    <Cell>1.3</Cell>
+    <Cell>245</Cell>
+    <Cell>6.30</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1173</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1950</Cell>
+  </Row>
+  <Row>
+    <Cell>99</Cell>
+    <Cell>Es</Cell>
+    <Cell>Einsteinium</Cell>
+    <Cell>252.0830</Cell>
+    <Cell>B31FD4</Cell>
+    <Cell>[Rn]7s2 5f11</Cell>
+    <Cell>1.3</Cell>
+    <Cell>245</Cell>
+    <Cell>6.42</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1133</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1952</Cell>
+  </Row>
+  <Row>
+    <Cell>100</Cell>
+    <Cell>Fm</Cell>
+    <Cell>Fermium</Cell>
+    <Cell>257.09511</Cell>
+    <Cell>B31FBA</Cell>
+    <Cell>[Rn] 5f12 7s2</Cell>
+    <Cell>1.3</Cell>
+    <Cell></Cell>
+    <Cell>6.50</Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1800</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1952</Cell>
+  </Row>
+  <Row>
+    <Cell>101</Cell>
+    <Cell>Md</Cell>
+    <Cell>Mendelevium</Cell>
+    <Cell>258.09843</Cell>
+    <Cell>B30DA6</Cell>
+    <Cell>[Rn]7s2 5f13</Cell>
+    <Cell>1.3</Cell>
+    <Cell></Cell>
+    <Cell>6.58</Cell>
+    <Cell></Cell>
+    <Cell>+3, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1100</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1955</Cell>
+  </Row>
+  <Row>
+    <Cell>102</Cell>
+    <Cell>No</Cell>
+    <Cell>Nobelium</Cell>
+    <Cell>259.10100</Cell>
+    <Cell>BD0D87</Cell>
+    <Cell>[Rn]7s2 5f14</Cell>
+    <Cell>1.3</Cell>
+    <Cell></Cell>
+    <Cell>6.65</Cell>
+    <Cell></Cell>
+    <Cell>+3, +2</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1100</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1957</Cell>
+  </Row>
+  <Row>
+    <Cell>103</Cell>
+    <Cell>Lr</Cell>
+    <Cell>Lawrencium</Cell>
+    <Cell>266.120</Cell>
+    <Cell>C70066</Cell>
+    <Cell>[Rn]7s2 5f14 6d1</Cell>
+    <Cell>1.3</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>+3</Cell>
+    <Cell>Solid</Cell>
+    <Cell>1900</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Actinide</Cell>
+    <Cell>1961</Cell>
+  </Row>
+  <Row>
+    <Cell>104</Cell>
+    <Cell>Rf</Cell>
+    <Cell>Rutherfordium</Cell>
+    <Cell>267.122</Cell>
+    <Cell>CC0059</Cell>
+    <Cell>[Rn]7s2 5f14 6d2</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>+4</Cell>
+    <Cell>Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1964</Cell>
+  </Row>
+  <Row>
+    <Cell>105</Cell>
+    <Cell>Db</Cell>
+    <Cell>Dubnium</Cell>
+    <Cell>268.126</Cell>
+    <Cell>D1004F</Cell>
+    <Cell>[Rn]7s2 5f14 6d3</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>5, 4, 3</Cell>
+    <Cell>Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1967</Cell>
+  </Row>
+  <Row>
+    <Cell>106</Cell>
+    <Cell>Sg</Cell>
+    <Cell>Seaborgium</Cell>
+    <Cell>269.128</Cell>
+    <Cell>D90045</Cell>
+    <Cell>[Rn]7s2 5f14 6d4</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>6, 5, 4, 3, 0</Cell>
+    <Cell>Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1974</Cell>
+  </Row>
+  <Row>
+    <Cell>107</Cell>
+    <Cell>Bh</Cell>
+    <Cell>Bohrium</Cell>
+    <Cell>270.133</Cell>
+    <Cell>E00038</Cell>
+    <Cell>[Rn]7s2 5f14 6d5</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>7, 5, 4, 3</Cell>
+    <Cell>Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1976</Cell>
+  </Row>
+  <Row>
+    <Cell>108</Cell>
+    <Cell>Hs</Cell>
+    <Cell>Hassium</Cell>
+    <Cell>269.1336</Cell>
+    <Cell>E6002E</Cell>
+    <Cell>[Rn]7s2 5f14 6d6</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>8, 6, 5, 4, 3, 2</Cell>
+    <Cell>Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1984</Cell>
+  </Row>
+  <Row>
+    <Cell>109</Cell>
+    <Cell>Mt</Cell>
+    <Cell>Meitnerium</Cell>
+    <Cell>277.154</Cell>
+    <Cell>EB0026</Cell>
+    <Cell>[Rn]7s2 5f14 6d7 (calculated)</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>9, 8, 6, 4, 3, 1</Cell>
+    <Cell>Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1982</Cell>
+  </Row>
+  <Row>
+    <Cell>110</Cell>
+    <Cell>Ds</Cell>
+    <Cell>Darmstadtium</Cell>
+    <Cell>282.166</Cell>
+    <Cell></Cell>
+    <Cell>[Rn]7s2 5f14 6d8 (predicted)</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>8, 6, 4, 2, 0</Cell>
+    <Cell>Expected to be a Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1994</Cell>
+  </Row>
+  <Row>
+    <Cell>111</Cell>
+    <Cell>Rg</Cell>
+    <Cell>Roentgenium</Cell>
+    <Cell>282.169</Cell>
+    <Cell></Cell>
+    <Cell>[Rn]7s2 5f14 6d9 (predicted)</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>5, 3, 1, -1</Cell>
+    <Cell>Expected to be a Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1994</Cell>
+  </Row>
+  <Row>
+    <Cell>112</Cell>
+    <Cell>Cn</Cell>
+    <Cell>Copernicium</Cell>
+    <Cell>286.179</Cell>
+    <Cell></Cell>
+    <Cell>[Rn]7s2 5f14 6d10 (predicted)</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>2, 1, 0</Cell>
+    <Cell>Expected to be a Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Transition metal</Cell>
+    <Cell>1996</Cell>
+  </Row>
+  <Row>
+    <Cell>113</Cell>
+    <Cell>Nh</Cell>
+    <Cell>Nihonium</Cell>
+    <Cell>286.182</Cell>
+    <Cell></Cell>
+    <Cell>[Rn]5f14 6d10 7s2 7p1 (predicted)</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Expected to be a Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Post-transition metal</Cell>
+    <Cell>2004</Cell>
+  </Row>
+  <Row>
+    <Cell>114</Cell>
+    <Cell>Fl</Cell>
+    <Cell>Flerovium</Cell>
+    <Cell>290.192</Cell>
+    <Cell></Cell>
+    <Cell>[Rn]7s2 7p2 5f14 6d10 (predicted)</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>6, 4,2, 1, 0</Cell>
+    <Cell>Expected to be a Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Post-transition metal</Cell>
+    <Cell>1998</Cell>
+  </Row>
+  <Row>
+    <Cell>115</Cell>
+    <Cell>Mc</Cell>
+    <Cell>Moscovium</Cell>
+    <Cell>290.196</Cell>
+    <Cell></Cell>
+    <Cell>[Rn]7s2 7p3 5f14 6d10 (predicted)</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>3, 1</Cell>
+    <Cell>Expected to be a Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Post-transition metal</Cell>
+    <Cell>2003</Cell>
+  </Row>
+  <Row>
+    <Cell>116</Cell>
+    <Cell>Lv</Cell>
+    <Cell>Livermorium</Cell>
+    <Cell>293.205</Cell>
+    <Cell></Cell>
+    <Cell>[Rn]7s2 7p4 5f14 6d10 (predicted)</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>+4, +2, -2</Cell>
+    <Cell>Expected to be a Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Post-transition metal</Cell>
+    <Cell>2000</Cell>
+  </Row>
+  <Row>
+    <Cell>117</Cell>
+    <Cell>Ts</Cell>
+    <Cell>Tennessine</Cell>
+    <Cell>294.211</Cell>
+    <Cell></Cell>
+    <Cell>[Rn]7s2 7p5 5f14 6d10 (predicted)</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>+5, +3, +1, -1</Cell>
+    <Cell>Expected to be a Solid</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Halogen</Cell>
+    <Cell>2010</Cell>
+  </Row>
+  <Row>
+    <Cell>118</Cell>
+    <Cell>Og</Cell>
+    <Cell>Oganesson</Cell>
+    <Cell>295.216</Cell>
+    <Cell></Cell>
+    <Cell>[Rn]7s2 7p6 5f14 6d10 (predicted)</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>+6, +4, +2, +1, 0, -1</Cell>
+    <Cell>Expected to be a Gas</Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell></Cell>
+    <Cell>Noble gas</Cell>
+    <Cell>2006</Cell>
+  </Row>
+</Table>

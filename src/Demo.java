@@ -8,5 +8,6 @@ public class Demo{
         System.out.print(">>>");
         String str = sc.nextLine();
         System.out.println(cfh.calcMr(str));
+        System.out.println(cfh.getDataInt(6,"YearDiscovered"));
     }
 }
