@@ -31,6 +31,8 @@ import org.w3c.dom.Element;
 import java.io.File;
 
 public class ChemicalFormulaHelper{
+
+
 	private static final Pattern elementPattern = Pattern.compile("([A-Z][a-z]?)(\\d*)");
 	public static double calcMr(String formula){
 		Matcher matcher = elementPattern.matcher(formula);
@@ -61,46 +63,14 @@ public class ChemicalFormulaHelper{
 	}
 
 
-	public static int getDataInt(int atomicNumber,String keyword){
+	public static String getData(int atomicNumber,String keyword){
 		int i = 0;
-		int result = 0;
+		String result = "error";
 		try{
 			File data = new File("mainData.xml");
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document doc = dBuilder.parse(data);
-			doc.getDocumentElement().normalize();
-			NodeList nList = doc.getElementsByTagName("Row");
-			Node nNode = nList.item(atomicNumber);
-			if(nNode.getNodeType() == Node.ELEMENT_NODE){
-				Element eElement = (Element) nNode;
-				switch(keyword){
-					case "YearDiscovered":
-						i = 16;
-						break;
-					default:
-						System.out.println("Unknown keyword");
-						break;
-				}
-				//int result = 0;
-				result = Integer.parseInt(eElement.getElementsByTagName("Cell").item(i).getTextContent());
-			}
-		}
-		catch(Exception e){
-			e.printStackTrace();
-		}
-		return result;
-	}
-
-
-	public static String getDataString(int atomicNumber,String keyword){
-		int i = 0;
-		String result ="error";
-		try{
-			File data = new File("mainData.xml");
-			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document doc = dBuilder.parse(data);
+			Document doc = dBuilder.parse(inputFile);
 			doc.getDocumentElement().normalize();
 			NodeList nList = doc.getElementsByTagName("Row");
 			Node nNode = nList.item(atomicNumber);
@@ -113,52 +83,14 @@ public class ChemicalFormulaHelper{
 					case "Name":
 						i = 2;
 						break;
+					case "AtomicMass":
+						i = 3;
+						break;
 					case "CPKHexColor":
 						i = 4;
 						break;
 					case "ElectronConfiguration":
-						i = 5;
-						break;
-					case "StandardState":
-						i = 11;
-						break;
-					case "MeltingPoint":
-						i = 12;
-						break;
-					case "GroupBlock":
-						i = 15;
-						break;
-					default:
-						System.out.println("Unknown keyword");
-						break;
-				}
-				//String result = "error";
-				result = eElement.getElementsByTagName("Cell").item(i).getTextContent();
-			}
-		}
-		catch(Exception e){
-			e.printStackTrace();
-		}
-		return result;
-	}
-
-
-	public static double getDataDouble(int atomicNumber,String keyword){
-		int i = 0;
-		double result = 0.0;
-		try{
-			File data = new File("mainData.xml");
-			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document doc = dBuilder.parse(data);
-			doc.getDocumentElement().normalize();
-			NodeList nList = doc.getElementsByTagName("Row");
-			Node nNode = nList.item(atomicNumber);
-			if(nNode.getNodeType() == Node.ELEMENT_NODE){
-				Element eElement = (Element) nNode;
-				switch(keyword){
-					case "AtomicMass":
-						i = 3;
+						i = 5:
 						break;
 					case "Electronegativity":
 						i = 6;
@@ -175,21 +107,32 @@ public class ChemicalFormulaHelper{
 					case "OxidationStates":
 						i = 10;
 						break;
+					case "StandardState":
+						i = 11;
+						break;
+					case "MeltingPoint":
+						i = 12;
+						break;
 					case "BoilingPoint":
 						i = 13;
 						break;
 					case "Density":
 						i = 14;
 						break;
+					case "GroupBlock":
+						i = 15;
+						break;
+					case "YearDiscovered":
+						i = 16;
+						break;
 					default:
 						System.out.println("Unknown keyword");
 						break;
 				}
-				//double result = 0.0;
-				result = Double.parseDouble(eElement.getElementsByTagName("Cell").item(i).getTextContent());
+				result = eElement.getElementsByTagName("Cell").item(i).getTextContent();
 			}
 		}
-		catch(Exception e){
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 		return result;
