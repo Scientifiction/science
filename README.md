@@ -22,7 +22,7 @@ Now available in two language (Java Node. js)
 
 Please ensure that the chemical formula entered is correct and case sensitive, otherwise the calculation will be wrong. Currently, only chemical formulas similar to `KMnO4` are supported. It is not supported to use `•`, such as ammonia monohydrate `NH3 • H2O`.(Support for `()` and `•` in nodejs) It also does not support those with `()` or `[]`, such as calcium hydroxide `Ca(OH)2`, but can be disassembled and written as `CaOHOH` or `CaO2H2`.
 
-The atomic subscript should not be too large, such as `C10000000000H2000000002`. Try to control it to `1-10000`(it is OK not to exceed `int`), otherwise the calculation will be wrong.
+The atomic subscript should not be too large, such as `C10000000000H2000000002`(Can do it in nodejs and it will get the true answer `122126000002.01599`). Try to control it to `1-10000`(it is OK not to exceed `int`), otherwise the calculation will be wrong.
 
 Do not add a coefficient in front of the chemical formula, such as `2KCl`, or the coefficient will be ignored.
 
