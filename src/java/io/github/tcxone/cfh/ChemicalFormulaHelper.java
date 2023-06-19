@@ -22,6 +22,7 @@ package io.github.tcxone.cfh;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.Arrays;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
@@ -137,6 +138,124 @@ public class ChemicalFormulaHelper{
 		}
 		return result;
 	}
+
+
+	public static void balanceEquation(String equation) {
+        // Split the equation into reactants and products
+        String[] parts = equation.split("->");
+        String reactants = parts[0].trim();
+        String products = parts[1].trim();
+
+        // Obtain the chemical formula of reactants and products
+        String[] reactantArray = reactants.split("\\+");
+        String[] productArray = products.split("\\+");
+
+        // Elements in statistical reactants and products
+        String[] elements = Arrays.stream(reactantArray)
+                .map(s -> s.replaceAll("\\d", "").trim())
+                .distinct()
+                .toArray(String[]::new);
+
+        // Create a matrix to represent a system of linear equations of chemical equations
+        int[][] matrix = new int[elements.length][reactantArray.length + productArray.length];
+
+        // Coefficient of filling reactants
+        for (int i = 0; i < reactantArray.length; i++) {
+            String reactant = reactantArray[i];
+            for (int j = 0; j < elements.length; j++) {
+                String element = elements[j];
+                int count = countElementInCompound(element, reactant);
+                matrix[j][i] = count;
+            }
+        }
+
+        // The coefficient of filling the product
+        for (int i = 0; i < productArray.length; i++) {
+            String product = productArray[i];
+            for (int j = 0; j < elements.length; j++) {
+                String element = elements[j];
+                int count = countElementInCompound(element, product);
+                matrix[j][i + reactantArray.length] = -count;
+            }
+        }
+
+        // Using the Gaussian elimination method to solve linear equations
+        int[] coefficients = solveLinearEquations(matrix);
+
+        // Print the balancing chemical equation
+        for (int i = 0; i < reactantArray.length; i++) {
+            int coefficient = coefficients[i];
+            String reactant = reactantArray[i].trim();
+            System.out.print(coefficient + reactant + " ");
+        }
+        System.out.print("-> ");
+        for (int i = reactantArray.length; i < coefficients.length; i++) {
+            int coefficient = coefficients[i];
+            String product = productArray[i - reactantArray.length].trim();
+            System.out.print(coefficient + product + " ");
+        }
+        System.out.println();
+    }
+
+    private static int countElementInCompound(String element, String compound) {
+        int count = 0;
+        for (int i = 0; i < compound.length(); i++) {
+            if (Character.isUpperCase(compound.charAt(i))) {
+                if (i > 0 && Character.isDigit(compound.charAt(i - 1))) {
+                    int multiplier = Character.getNumericValue(compound.charAt(i - 1));
+                    count += multiplier - 1;
+                } else {
+                    count++;
+                }
+                if (compound.charAt(i) == element.charAt(0)) {
+                    if (element.length() == 1 || (i + 1 < compound.length() && compound.charAt(i + 1) == element.charAt(1))) {
+                        count++;
+                    }
+                }
+            }
+        }
+        return count;
+    }
+
+    private static int[] solveLinearEquations(int[][] matrix) {
+        int rows = matrix.length;
+        int cols = matrix[0].length - 1;
+
+        for (int pivot = 0; pivot < rows; pivot++) {
+            int maxRow = pivot;
+            for (int row = pivot + 1; row < rows; row++) {
+                if (Math.abs(matrix[row][pivot]) > Math.abs(matrix[maxRow][pivot])) {
+                    maxRow = row;
+                }
+            }
+
+            int[] temp = matrix[pivot];
+            matrix[pivot] = matrix[maxRow];
+            matrix[maxRow] = temp;
+
+            for (int row = pivot + 1; row < rows; row++) {
+                int factor = matrix[row][pivot] / matrix[pivot][pivot];
+                for (int col = pivot; col <= cols; col++) {
+                    matrix[row][col] -= factor * matrix[pivot][col];
+                }
+            }
+        }
+
+        int[] coefficients = new int[cols];
+        for (int row = rows - 1; row >= 0; row--) {
+            coefficients[row] = matrix[row][cols] / matrix[row][row];
+            for (int i = 0; i < row; i++) {
+                matrix[i][cols] -= matrix[i][row] * coefficients[row];
+            }
+        }
+
+        return coefficients;
+    }
+
+    /*public static void main(String[] args) {
+        String equation = "CH4 + O2 -> CO2 + H2O";
+        balanceEquation(equation);
+    }*/
 
 
 	public static int getDataInt(int atomicNumber,String keyword){

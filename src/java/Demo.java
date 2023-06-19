@@ -9,5 +9,6 @@ public class Demo{
         String str = sc.nextLine();
         System.out.println(cfh.calcMr(str));
         System.out.println(cfh.getDataInt(7,"YearDiscovered"));
+        cfh.balanceEquation("CH4 + O2 -> CO2 + H2O");
     }
 }
