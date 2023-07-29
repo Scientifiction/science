@@ -228,14 +228,16 @@ class equation extends Chemistry{
         }
         var standard=Array(this.left.length).fill(0).map((e,m)=>{
             var g=1;
-            for(var i in this.left[m][1].mula){
-                g*=Math.ceil(sumt.mula[i]/this.left[m][1].mula[i])
+            var az=this.left[m][1].all();
+            for(var i in az){
+                g*=Math.ceil(sumt.mula[i]/az[i])
             }
             return g;
         }).concat(Array(this.right.length).fill(0).map((e,m)=>{
             var g=1;
-            for(var i in this.right[m][1].mula){
-                g*=Math.ceil(sumt.mula[i]/this.right[m][1].mula[i])
+            var az=this.right[m][1].all();
+            for(var i in az){
+                g*=Math.ceil(sumt.mula[i]/az[i])
             }
             return g;
         }));
