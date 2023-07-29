@@ -1,15 +1,15 @@
-
-const _wheel_y=a=>a.match(/(\(([A-Z][a-z]{0,1}[0-9]*)+\)[0-9]+)|([A-Z][a-z]{0,1}[0-9]*)/g);
-const _wheel_p=(e)=>{
+const ChemistryWheel={};
+ChemistryWheel.y=a=>a.match(/(\(([A-Z][a-z]{0,1}[0-9]*)+\)[0-9]+)|([A-Z][a-z]{0,1}[0-9]*)/g);
+ChemistryWheel.p=(e)=>{
     if(e.includes("(")){
-        var g=_wheel_y(e.match(/^\(.+\)/g)[0].slice(1,-1));
+        var g=ChemistryWheel.y(e.match(/^\(.+\)/g)[0].slice(1,-1));
         var t=Number(e.match(/[0-9]+$/g)[0]);
-        return ["BLOCK",g.map(e=>_wheel_p(e)),t]
+        return ["BLOCK",g.map(e=>ChemistryWheel.p(e)),t]
     }else{
         return ["ELE",e.match(/^[^0-9]+/g)[0],(e.match(/[0-9]+$/g)?Number(e.match(/[0-9]+$/g)[0]):1)]
     }
 }
-const _wheel_d=(arr,blockid=0)=>{
+ChemistryWheel.d=(arr,blockid=0)=>{
     var f={};
     arr.map(e=>{
         if(e[0]=="ELE"){
@@ -19,24 +19,24 @@ const _wheel_d=(arr,blockid=0)=>{
                 f[e[1]]=e[2]
             }
         }else if(e[0]=="BLOCK"){
-            f["BLOCK"+blockid]=[_wheel_d(e[1]),e[2]];
+            f["BLOCK"+blockid]=[ChemistryWheel.d(e[1]),e[2]];
             blockid++;
-        }else{throw "Invalid chemical formula"}
+        }else{throw "Invalid chemical Formula"}
     });
     return f;
 }
-const _wheel_dumps=(g)=>{
+ChemistryWheel.dumps=(g)=>{
     var f="";
     for(var i in g){
         if(i.startsWith("BLOCK")){
-            f+="("+_wheel_dumps(g[i][0])+")"+g[i][1]
+            f+="("+ChemistryWheel.dumps(g[i][0])+")"+g[i][1]
         }else{
             f+=i+(g[i]==1?"":g[i]);
         }
     }
     return f;
 }
-const _wheel_gcd=(a, b)=> {
+ChemistryWheel.gcd=(a, b)=> {
     if (b > a) {
         let temp = a;
         a = b;
@@ -45,12 +45,12 @@ const _wheel_gcd=(a, b)=> {
     if (a == b || b == 0) { 
         return a;
     }
-    return _wheel_gcd(b, a % b);
+    return ChemistryWheel.gcd(b, a % b);
 }
-const _wheel_lcm=(a, b)=> {
-    return (a * b)/_wheel_gcd(a,b);
+ChemistryWheel.lcm=(a, b)=> {
+    return (a * b)/ChemistryWheel.gcd(a,b);
 }
-const _wheel_standardadd=function(b,a){
+ChemistryWheel.standardadd=function(b,a){
     var le=arguments[2]+1?arguments[2]:b.length-1;
     b[le]++;
     if(b[le]>a[le]){
@@ -58,7 +58,7 @@ const _wheel_standardadd=function(b,a){
         if(le==0){
             throw("Bigger than standard")
         }else{
-            _wheel_standardadd(b,a,le-1)
+            ChemistryWheel.standardadd(b,a,le-1)
         }
     }
 }
@@ -67,7 +67,7 @@ class Chemistry{
     constructor(x){
     }
 }
-class formula extends Chemistry{
+class Formula extends Chemistry{
     constructor(mula){
         super(mula);
         if(Object.prototype.toString.call(mula).slice(8,-1)=="String"){
@@ -78,14 +78,14 @@ class formula extends Chemistry{
     }
     toArray(x){
         if(x.length==0){return []}
-        return(_wheel_y(x).map(e=>_wheel_p(e)));
+        return(ChemistryWheel.y(x).map(e=>ChemistryWheel.p(e)));
     }
     toString(){
-        return _wheel_dumps(this.mula)
+        return ChemistryWheel.dumps(this.mula)
     }
     parse(x){
         if(x.length==0){return {}}
-        return _wheel_d(this.toArray(x))
+        return ChemistryWheel.d(this.toArray(x))
     }
     all(){
         if(Object.keys(this.mula).length==0){return {}}
@@ -124,7 +124,7 @@ class formula extends Chemistry{
                 t_all[i]=f[i]
             }
         }
-        return new formula(t_all);
+        return new Formula(t_all);
     }
     reduce(g){
         var f={};
@@ -140,14 +140,14 @@ class formula extends Chemistry{
                 t_all[i]=-f[i]
             }
         }
-        return new formula(t_all);
+        return new Formula(t_all);
     }
     mult(n){
         var t_all=this.all();
         for(var i in t_all){
             t_all[i]*=n;
         }
-        return new formula(t_all);
+        return new Formula(t_all);
     }
     isequal(g){
         var f={};
@@ -205,26 +205,26 @@ const Speed={
     }
 }
 
-class equation extends Chemistry{
+class Equation extends Chemistry{
     constructor(equ){
         super(equ);
         var f=equ.replaceAll(" ","").split("=");
-        this.left=f[0].split("+").map(e=>[e.match(/^[0-9]+/g)?Number(e.match(/^[0-9]+/g)[0]):1,new formula(e.replace(/^[0-9]+/g,""))]);
-        this.right=f[1].split("+").map(e=>[e.match(/^[0-9]+/g)?Number(e.match(/^[0-9]+/g)[0]):1,new formula(e.replace(/^[0-9]+/g,""))]);
+        this.left=f[0].split("+").map(e=>[e.match(/^[0-9]+/g)?Number(e.match(/^[0-9]+/g)[0]):1,new Formula(e.replace(/^[0-9]+/g,""))]);
+        this.right=f[1].split("+").map(e=>[e.match(/^[0-9]+/g)?Number(e.match(/^[0-9]+/g)[0]):1,new Formula(e.replace(/^[0-9]+/g,""))]);
         this.op=this.left.map(e=>e[1].all()).concat(this.right.map(e=>e[1].reverse()));
     }
     trim(){
-        var sumt=new formula({});
+        var sumt=new Formula({});
         this.left.forEach(e=>{
             sumt=sumt.add(e[1])
         });
-        var sumr=new formula({});
+        var sumr=new Formula({});
         this.right.forEach(e=>{
             sumr=sumr.add(e[1])
         });
         var andt=sumr.reduce(sumt).all();
         for(var i in sumr.mula){
-            sumt.mula[i]=_wheel_lcm(sumt.mula[i],sumr.mula[i]);
+            sumt.mula[i]=ChemistryWheel.lcm(sumt.mula[i],sumr.mula[i]);
         }
         var standard=Array(this.left.length).fill(0).map((e,m)=>{
             var g=1;
@@ -253,7 +253,7 @@ class equation extends Chemistry{
             if(Speed.isequal(sum,andt)){
                 break;
             }
-            if(i!=allnum-1){_wheel_standardadd(k,standard);}
+            if(i!=allnum-1){ChemistryWheel.standardadd(k,standard);}
         }
         for(var i=0;i<this.left.length;i++){
             this.left[i][0]+=k[i];
@@ -270,7 +270,7 @@ class equation extends Chemistry{
             if(e[0]!=1){
                 t+=e[0];
             }
-            t+=_wheel_dumps(e[1].mula);
+            t+=ChemistryWheel.dumps(e[1].mula);
             return t;
         }).join("+");
         s+="=";
@@ -279,7 +279,7 @@ class equation extends Chemistry{
             if(e[0]!=1){
                 t+=e[0];
             }
-            t+=_wheel_dumps(e[1].mula);
+            t+=ChemistryWheel.dumps(e[1].mula);
             return t;
         }).join("+");
         return s;
