@@ -21,4 +21,5 @@ Mathm.I=require("./I");
 Mathm.Matrix=require("./Matrix");
 Mathm.Det=require("./Det");
 Mathm.Fraction=require("./Fraction");
+Mathm.O=require("./Operation")
 module.exports=Mathm;
