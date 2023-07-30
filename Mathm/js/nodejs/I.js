@@ -1,8 +1,5 @@
 class I{
     constructor(a,b){
-        if(b==0){
-            throw("Imaginary Part can't be 0")
-        }
         this.a=a;
         this.b=b;
         this.type="I";
@@ -20,8 +17,10 @@ class I{
     mult(n){
         if(n.type&&n.type=="I"){
             return this.mult(n.a).add(-n.b*this.b).add(new I(0,this.a*n.b))
+        }else if(n==0){
+            return 0;
         }else{
-            return new I(this.a*n,this.b);
+            return new I(this.a*n,this.b*n);
         }
     }
     add(n){
@@ -36,6 +35,14 @@ class I{
             return new I(this.a-n.a,this.b-n.b);
         }else{
             return new I(this.a-n,this.b);
+        }
+        
+    }
+    divide(n){
+        if(n.b!=0&&n.type&&n.type=="I"){
+            return this.mult(n.conjugate()).divide(n.mult(n.conjugate()));
+        }else{
+            return new I(this.a/n.a,this.b/n.a);
         }
         
     }
