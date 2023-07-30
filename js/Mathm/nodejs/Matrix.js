@@ -1,4 +1,6 @@
 const Operation=require("./Operation");
+const lib=require("./lib")
+
 class Matrix{
     constructor(arr){
         this.arr=arr;
@@ -49,9 +51,33 @@ class Matrix{
         return new Matrix(g)
     }
     mult(b){
-        if(b.type&&b.type=="Matrix"){}else{
+        if(b.type&&(b.type=="Matrix"||b.type=="Det")){
+            if(this.n!=b.m){
+                throw("The rows and columns of two matrix matrices are not equal")
+            }
+            var g=[];
+            for(var i=0;i<this.m;i++){
+                g.push([]);
+                for(var j=0;j<b.n;j++){
+                    g[i].push(lib.sigma(0,this.n-1,(e)=>Operation.mult(this.arr[i][e],b.arr[e][j])))
+                }
+            }
+            return new Matrix(g)
+        }else{
             return this.nummult(b);
         }
+    }
+    conjugate(){
+        var g=[];
+        Object.assign(g,this.arr);
+        for(var i=0;i<this.m;i++){
+            for(var j=0;j<this.n;j++){
+                if(g[i][j].type=="I"){
+                    g[i][j]=g[i][j].conjugate();
+                }
+            }
+        }
+        return new Matrix(g)
     }
     trans(){
         var g=new Array(this.n).fill(0).map(()=>{
@@ -63,6 +89,9 @@ class Matrix{
             }
         }
         return new Matrix(g)
+    }
+    conjtrans(){
+        return this.conjugate().trans();
     }
     homofunc(){}
     trace(){
@@ -86,5 +115,43 @@ Matrix.diag=function(x){
         }
     }
     return new Matrix(g);
+}
+Matrix.Hadamard=function(a,b){
+    if(!(a.n==b.n&&a.m==b.m&&(a.type=="Matrix"||a.type=="Det")&&(b.type=="Matrix"||b.type=="Det"))){
+        throw("The two parameters have different sizes")
+    }
+    var g=[];
+    Object.assign(g,a.arr);
+    for(var i=0;i<b.m;i++){
+        for(var j=0;j<b.n;j++){
+            g[i][j]=Operation.mult(g[i][j],b.arr[i][j]);
+        }
+    }
+    return new Matrix(g)
+
+}
+Matrix.Kronecker=function(a,b){
+    console.log(a,b)
+    if(a.n==0||a.m==0||b.n==0||b.m==0){
+        return new Matrix([]);
+    }
+    var g=[];
+    for(var a0=0;a0<a.m;a0++){
+        for(var b0=0;b0<b.m;b0++){
+            g.push([]);
+            for(var c=0;c<a.n;c++){
+                for(var d=0;d<b.n;d++){
+                    g[a0*b.m+b0].push(Operation.mult(a.arr[a0][c],b.arr[b0][d]))
+                }
+            }
+        }
+    }/*
+    for(var j=0;j<a.m*b.m;j++){
+        g.push([]);
+        for(var i=0;i<a.n*b.n;i++){
+            g[j].push(Operation.mult(a.arr[(j-j%a.m)/a.m][(i-i%a.n)/a.n],b.arr[j%b.m][i%b.n]))
+        }
+    }*/
+    return new Matrix(g)
 }
 module.exports=Matrix;
