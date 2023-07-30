@@ -48,7 +48,11 @@ class Matrix{
         }
         return new Matrix(g)
     }
-    mult(b){}
+    mult(b){
+        if(b.type&&b.type=="Matrix"){}else{
+            return this.nummult(b);
+        }
+    }
     trans(){
         var g=new Array(this.n).fill(0).map(()=>{
             return Array(this.m)
