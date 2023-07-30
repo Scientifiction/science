@@ -39,7 +39,6 @@ class Equation extends Chemistry{
             }
             return g;
         }));
-        console.log({standard,andt,sumt,sumr})
         var k=Array(this.left.length+this.right.length).fill(0);
         var allnum=1;
         standard.map(e=>allnum*=e+1);
@@ -60,7 +59,6 @@ class Equation extends Chemistry{
         for(var i=0;i<k.length-this.left.length;i++){
             this.right[i][0]+=k[i+this.left.length];
         }
-        console.log(k)
         return k;
     }
     toString(){

@@ -60,6 +60,14 @@ class Matrix{
         }
         return new Matrix(g)
     }
+    homofunc(){}
+    trace(){
+        var f=0;
+        for(var i=0;i<this.m;i++){
+            f=Operation.add(f,this.arr[i][i]);
+        }
+        return f;
+    }
 }
 Matrix.diag=function(x){
     var g=[];
