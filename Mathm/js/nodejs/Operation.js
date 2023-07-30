@@ -1,5 +1,6 @@
+//const Fraction=require("./Fraction");
 var Operation={};
-Operation.list=["I","Det","Matrix"];
+Operation.list=["I","Fraction","Det","Matrix"];
 Operation.add=function(a,b){
     if(a.type=="I"||a.type=="Matrix"){
         if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){
@@ -37,6 +38,20 @@ Operation.mult=function(a,b){
         return b.mult(a);
     }else{
         return a*b;
+    }
+}
+Operation.divide=function(a,b){
+    if(a.type=="I"||a.type=="Matrix"){
+        if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){
+            return b.divide(a)
+        }else{
+            return a.divide(b);
+        }
+    }else if(b.type=="I"||b.type=="Matrix"){
+        return b.divide(a);
+    }else{
+        //return new Fraction(a,b);
+        return a/b;
     }
 }
 module.exports=Operation;
