@@ -1,5 +1,5 @@
 var Operation={};
-Operation.list=["I","Matrix"];
+Operation.list=["I","Det","Matrix"];
 Operation.add=function(a,b){
     if(a.type=="I"||a.type=="Matrix"){
         if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){

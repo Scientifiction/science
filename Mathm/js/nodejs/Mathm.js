@@ -23,5 +23,6 @@ Mathm.pi=(k,n,f)=>{var r=1;Mathm.range(k,n+1).map(e=>{r*=f(e)});return r}
 Mathm.Set=require("./Set");
 Mathm.Statistics=require("./Statistics");
 Mathm.I=require("./I");
-Mathm.Matrix=require("./Matrix")
+Mathm.Matrix=require("./Matrix");
+Mathm.Det=require("./Det")
 module.exports=Mathm;
