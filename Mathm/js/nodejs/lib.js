@@ -13,7 +13,7 @@ lib.findprimes=(n)=>{var P=[];var isPrime = new Array(n).fill(1);
     for(let i=2;i<n;++i){if(isPrime[i]){P.push(i);for(let j=i*i;j<n;j+=i){isPrime[j]=0}}}return P;
 }
 lib.round=function(n){if(arguments[1]){var m=arguments[1];return Math.round(n*Math.pow(10,m))/Math.pow(10,m)}else{return Math.round(n)}}
-lib.log=function(N){if(arguments[1]){var a=arguments[1];return Math.log(N)/Math.log(a)}else{return Math.log(N)}}
+lib.log=function(N){if(arguments[1]){var a=arguments[0];var N=arguments[1];return Math.log(N)/Math.log(a)}else{return Math.log(N)}}
 lib.root=(a,b)=>lib.pow(a,1/b)
 lib.reciprocal=a=>1/a
 lib.continued=(arr)=>{return arr.slice(1).toString()==[].toString()?arr[0]:arr[0]+1/eval("lib.continued(["+String(arr.slice(1))+"])")}//Continued fraction
