@@ -42,7 +42,7 @@ class I{
         if(n.b!=0&&n.type&&n.type=="I"){
             return this.mult(n.conjugate()).divide(n.mult(n.conjugate()));
         }else{
-            return new I(this.a/n.a,this.b/n.a);
+            return new I(this.a/n,this.b/n);
         }
         
     }

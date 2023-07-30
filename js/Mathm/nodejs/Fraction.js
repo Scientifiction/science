@@ -9,7 +9,7 @@ class Fraction{
         this.a=a;
         this.b=b;
         this.type="Fraction";
-        this.value=this.a/this.b;
+        this.value=Operation.divide(this.a,this.b);
     }
     add(n){
         if(n.type&&n.type=="Fraction"){

@@ -2,7 +2,11 @@
 var Operation={};
 Operation.list=["I","Fraction","Det","Matrix"];
 Operation.add=function(a,b){
-    if(a.type=="I"||a.type=="Matrix"){
+    if(a==undefined){
+        return b;
+    }else if(b==undefined){
+        return a
+    }else if(a.type=="I"||a.type=="Matrix"){
         if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){
             return b.add(a)
         }else{

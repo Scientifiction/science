@@ -1,3 +1,4 @@
+const O=require("./Operation")
 var lib={};
 lib.A=function(m,n){if(m==1){return n;}else{return n*A(m-1,n-1)}};//Number of permutations
 lib.C=function(m,n){return A(m,n)/A(m,m)};//Number of combinations
@@ -17,7 +18,7 @@ lib.log=function(N){if(arguments[1]){var a=arguments[0];var N=arguments[1];retur
 lib.root=(a,b)=>lib.pow(a,1/b)
 lib.reciprocal=a=>1/a
 lib.continued=(arr)=>{return arr.slice(1).toString()==[].toString()?arr[0]:arr[0]+1/eval("lib.continued(["+String(arr.slice(1))+"])")}//Continued fraction
-lib.sigma=(i,n,f)=>lib.range(i,n+1).reduce((a,b) =>a+f(b),0)
+lib.sigma=(i,n,f)=>lib.range(i,n+1).reduce((a,b) =>O.add(a,f(b)),0)
 lib.pi=(k,n,f)=>{var r=1;lib.range(k,n+1).map(e=>{r*=f(e)});return r}
 lib.Set=require("./Set");
 module.exports=lib;
