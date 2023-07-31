@@ -1,7 +1,7 @@
-// GitHub tcxone/ChemicalFormulaHelper
+// GitHub Scientifiction/science
 // v0.0.2
 // MIT License
-// Copyright (c) 2022-2023 tcxone
+// Copyright (c) 2022-2023 Scientifiction
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
@@ -18,7 +18,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-package io.github.tcxone.cfh;
+package io.github.scientifiction.science;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -31,7 +31,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
 
-public class ChemicalFormulaHelper{
+public class Science{
 
 
 	private static final Pattern elementPattern = Pattern.compile("([A-Z][a-z]?)(\\d*)");
