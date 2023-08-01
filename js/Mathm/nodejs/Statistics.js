@@ -1,5 +1,5 @@
 var Statistics={}
-const lib=require("./lib")
+const lib=require("./lib2")
 Statistics.mean={
     arithmetic:function(a){
         q=arguments[1]||Array(a.length).fill(1);

@@ -5,53 +5,53 @@ Operation.add=function(a,b){
         return b;
     }else if(b==undefined){
         return a
-    }else if(a.type=="I"||a.type=="Matrix"){
+    }else if(Operation.list.indexOf(a.type)!=-1){
         if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){
             return b.add(a)
         }else{
             return a.add(b);
         }
-    }else if(b.type=="I"||b.type=="Matrix"){
+    }else if(Operation.list.indexOf(b.type)!=-1){
         return b.add(a);
     }else{
         return a+b;
     }
 }
 Operation.reduce=function(a,b){
-    if(a.type=="I"||a.type=="Matrix"){
+    if(Operation.list.indexOf(a.type)!=-1){
         if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){
-            return b.reduce(a)
+            return b.bereduced(a)
         }else{
             return a.reduce(b);
         }
-    }else if(b.type=="I"||b.type=="Matrix"){
-        return b.reduce(a);
+    }else if(Operation.list.indexOf(b.type)!=-1){
+        return b.bereduced(a);
     }else{
         return a-b;
     }
 }
 Operation.mult=function(a,b){
-    if(a.type=="I"||a.type=="Matrix"){
+    if(Operation.list.indexOf(a.type)!=-1){
         if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){
             return b.mult(a)
         }else{
             return a.mult(b);
         }
-    }else if(b.type=="I"||b.type=="Matrix"){
+    }else if(Operation.list.indexOf(b.type)!=-1){
         return b.mult(a);
     }else{
         return a*b;
     }
 }
 Operation.divide=function(a,b){
-    if(a.type=="I"||a.type=="Matrix"){
+    if(Operation.list.indexOf(a.type)!=-1){
         if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){
-            return b.divide(a)
+            return b.bedivided(a)
         }else{
             return a.divide(b);
         }
-    }else if(b.type=="I"||b.type=="Matrix"){
-        return b.divide(a);
+    }else if(Operation.list.indexOf(b.type)!=-1){
+        return b.bedivided(a);
     }else if(arguments[2]){
         return a/b;
     }else{

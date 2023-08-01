@@ -1,5 +1,5 @@
 const Operation=require("./Operation");
-const lib=require("./lib")
+const lib=require("./lib2")
 
 class Matrix{
     constructor(arr){
