@@ -1,6 +1,21 @@
 const Operation=require("./Operation");
 const lib=require("./lib");
-
+/*
+Operation.divide=function(a,b){
+    if(a.type=="I"||a.type=="Matrix"){
+        if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){
+            return b.divide(a)
+        }else{
+            return a.divide(b);
+        }
+    }else if(b.type=="I"||b.type=="Matrix"){
+        return b.divide(a);
+    }else if(arguments[2]){
+        return a/b;
+    }else{
+        return new Fraction(a,b);
+    }
+}*/
 class Fraction{
     constructor(a,b){
         if(b==0){
@@ -9,12 +24,12 @@ class Fraction{
         this.a=a;
         this.b=b;
         this.type="Fraction";
-        this.value=Operation.divide(this.a,this.b);
+        this.value=Operation.divide(this.a,this.b,1);
     }
     add(n){
         if(n.type&&n.type=="Fraction"){
             var h=lib.lcm(this.b,n.b);
-            return new Fraction(Operation.add(Operation.divide(Operation.mult(this.a,h),this.b),Operation.mult(n.a,Operation.divide(h,n.b))),h);
+            return new Fraction(Operation.add(Operation.divide(Operation.mult(this.a,h),this.b,1),Operation.mult(n.a,Operation.divide(h,n.b,1))),h);
         }else{
             return new Fraction(Operation.add(this.a,Operation.mult(n,this.b)),this.b)
         }
@@ -22,7 +37,7 @@ class Fraction{
     reduce(n){
         if(n.type&&n.type=="Fraction"){
             var h=lib.lcm(this.b,n.b);
-            return new Fraction(Operation.reduce(Operation.divide(Operation.mult(this.a,h),this.b),Operation.mult(n.a,Operation.divide(h,n.b))),h);
+            return new Fraction(Operation.reduce(Operation.divide(Operation.mult(this.a,h),this.b,1),Operation.mult(n.a,Operation.divide(h,n.b,1))),h);
         }else{
             return new Fraction(Operation.reduce(this.a,Operation.mult(n,this.b)),this.b)
         }
@@ -43,7 +58,7 @@ class Fraction{
     }
     trim(){
         var h=lib.gcd(this.a,this.b);
-        return new Fraction(Operation.divide(this.a,h),Operation.divide(this.b,h));
+        return new Fraction(Operation.divide(this.a,h,1),Operation.divide(this.b,h,1));
     }
     toString(){
         return String(this.value());

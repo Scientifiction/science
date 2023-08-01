@@ -1,4 +1,3 @@
-//const Fraction=require("./Fraction");
 var Operation={};
 Operation.list=["I","Fraction","Det","Matrix"];
 Operation.add=function(a,b){
@@ -53,9 +52,11 @@ Operation.divide=function(a,b){
         }
     }else if(b.type=="I"||b.type=="Matrix"){
         return b.divide(a);
-    }else{
-        //return new Fraction(a,b);
+    }else if(arguments[2]){
         return a/b;
+    }else{
+        return new Fraction(a,b);
     }
 }
 module.exports=Operation;
+const Fraction=require("./Fraction");
