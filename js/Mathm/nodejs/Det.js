@@ -30,7 +30,7 @@ class Det{
             Object.assign(f,this.arr);
             for(var i=f.length-1;i>=0;i--){
                 for(var j=i-1;j>-1;j--){
-                    var h=f[j][i]/f[i][i];
+                    var h=Operation.divide(f[j][i],f[i][i]);
                     for(var k=0;k<f.length;k++){
                         f[j][k]=Operation.reduce(f[j][k],Operation.mult(f[i][k],h))
                     }
@@ -42,7 +42,7 @@ class Det{
             Object.assign(f,this.arr);
             for(var i=0;i<f.length;i++){
                 for(var j=i+1;j<f.length;j++){
-                    var h=f[j][i]/f[i][i];
+                    var h=Operation.divide(f[j][i],f[i][i]);
                     for(var k=0;k<f.length;k++){
                         f[j][k]=Operation.reduce(f[j][k],Operation.mult(f[i][k],h))
                     }

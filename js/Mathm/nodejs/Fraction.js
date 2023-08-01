@@ -61,7 +61,7 @@ class Fraction{
         return new Fraction(Operation.divide(this.a,h,1),Operation.divide(this.b,h,1));
     }
     toString(){
-        return String(this.value());
+        return String(this.value);
     }
 }
 module.exports=Fraction;
