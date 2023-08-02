@@ -1,6 +1,6 @@
-const {Equation}=require("../index");
+const Chemistry=require("../Chemistry");
 
-var a=new Equation("Cu3P+CuSO4+H2O=Cu+H2SO4+H3PO4");
+var a=new Chemistry.Equation("H2+O2=H2O");
 console.log(a+"");
 a.trim();
 console.log(a+"");

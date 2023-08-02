@@ -1,11 +1,9 @@
-const Chemistry=require("./Chemistry");
 const Wheel=require("./Wheel");
 const Speed=require("./Speed");
 const Formula=require("./Formula")
 
-class Equation extends Chemistry{
+class Equation{
     constructor(equ){
-        super(equ);
         var f=equ.replaceAll(" ","").split("=");
         this.left=f[0].split("+").map(e=>[e.match(/^[0-9]+/g)?Number(e.match(/^[0-9]+/g)[0]):1,new Formula(e.replace(/^[0-9]+/g,""))]);
         this.right=f[1].split("+").map(e=>[e.match(/^[0-9]+/g)?Number(e.match(/^[0-9]+/g)[0]):1,new Formula(e.replace(/^[0-9]+/g,""))]);

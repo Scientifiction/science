@@ -1,9 +1,6 @@
-const Chemistry=require("./Chemistry");
 const Wheel=require("./Wheel");
-
-class Formula extends Chemistry{
+class Formula{
     constructor(mula){
-        super(mula);
         if(Object.prototype.toString.call(mula).slice(8,-1)=="String"){
             this.mula=this.parse(mula);
         }else{
