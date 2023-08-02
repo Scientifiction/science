@@ -1,3 +1,6 @@
-Mathm.\<All Class\>.bereduced
+# Bugs
++ Mathm.\<All Class\>.bereduced
++ Mathm.\<All Class\>.bedevided
 
-Mathm.\<All Class\>.bedevided
+# Unfinished Work
++ Involution
