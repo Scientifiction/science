@@ -17,48 +17,48 @@ Operation.divide=function(a,b){
     }
 }*/
 class Fraction{
-    constructor(a,b){
-        if(b==0){
-            throw("The dividend cannot be 0")
+    constructor(numerator,denominator){
+        if(denominator==0){
+            throw("The denominator cannot be 0")
         }
-        this.a=a;
-        this.b=b;
+        this.numerator=numerator;
+        this.denominator=denominator;
         this.type="Fraction";
-        this.value=Operation.divide(this.a,this.b,1);
+        this.value=Operation.divide(this.numerator,this.denominator,1);
     }
     add(n){
         if(n.type&&n.type=="Fraction"){
-            var h=lib.lcm(this.b,n.b);
-            return new Fraction(Operation.add(Operation.divide(Operation.mult(this.a,h),this.b,1),Operation.mult(n.a,Operation.divide(h,n.b,1))),h);
+            var h=lib.lcm(this.denominator,n.denominator);
+            return new Fraction(Operation.add(Operation.divide(Operation.mult(this.numerator,h),this.denominator,1),Operation.mult(n.numerator,Operation.divide(h,n.denominator,1))),h);
         }else{
-            return new Fraction(Operation.add(this.a,Operation.mult(n,this.b)),this.b)
+            return new Fraction(Operation.add(this.numerator,Operation.mult(n,this.denominator)),this.denominator)
         }
     }
     reduce(n){
         if(n.type&&n.type=="Fraction"){
-            var h=lib.lcm(this.b,n.b);
-            return new Fraction(Operation.reduce(Operation.divide(Operation.mult(this.a,h),this.b,1),Operation.mult(n.a,Operation.divide(h,n.b,1))),h);
+            var h=lib.lcm(this.denominator,n.denominator);
+            return new Fraction(Operation.reduce(Operation.divide(Operation.mult(this.numerator,h),this.denominator,1),Operation.mult(n.numerator,Operation.divide(h,n.denominator,1))),h);
         }else{
-            return new Fraction(Operation.reduce(this.a,Operation.mult(n,this.b)),this.b)
+            return new Fraction(Operation.reduce(this.numerator,Operation.mult(n,this.denominator)),this.denominator)
         }
     }
     mult(n){
         if(n.type&&n.type=="Fraction"){
-            return new Fraction(Operation.mult(this.a,n.a),Operation.mult(n.b,this.b));
+            return new Fraction(Operation.mult(this.numerator,n.numerator),Operation.mult(n.denominator,this.denominator));
         }else{
-            return new Fraction(Operation.mult(this.a,n),this.b)
+            return new Fraction(Operation.mult(this.numerator,n),this.denominator)
         }
     }
     divide(n){
         if(n.type&&n.type=="Fraction"){
-            return new Fraction(Operation.mult(this.a,n.b),Operation.mult(n.a,this.b));
+            return new Fraction(Operation.mult(this.numerator,n.denominator),Operation.mult(n.numerator,this.denominator));
         }else{
-            return new Fraction(this.a,Operation.mult(this.b,n))
+            return new Fraction(this.numerator,Operation.mult(this.denominator,n))
         }
     }
     trim(){
-        var h=lib.gcd(this.a,this.b);
-        return new Fraction(Operation.divide(this.a,h,1),Operation.divide(this.b,h,1));
+        var h=lib.gcd(this.numerator,this.denominator);
+        return new Fraction(Operation.divide(this.numerator,h,1),Operation.divide(this.denominator,h,1));
     }
     toString(){
         return String(this.value);
