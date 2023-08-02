@@ -18,13 +18,32 @@ Operation.divide=function(a,b){
 }*/
 class Fraction{
     constructor(numerator,denominator){
-        if(denominator==0){
+        var numerator0=numerator;
+        var denominator0=denominator;
+        if(denominator0==undefined){
+            var s=String(numerator0).split("");
+            var d=s.indexOf(".");
+            if(d==-1){
+                denominator0=1;
+            }else{
+                denominator0=10**(s.length-1-d);
+                numerator0*=10**(s.length-1-d);
+            }
+        }else if(denominator==0){
             throw("The denominator cannot be 0")
         }
-        this.numerator=numerator;
-        this.denominator=denominator;
-        this.type="Fraction";
-        this.value=Operation.divide(this.numerator,this.denominator,1);
+        if(numerator0.type||denominator0.type){
+            this.numerator=numerator0;
+            this.denominator=denominator0;
+            this.type="Fraction";
+            this.value=Operation.divide(this.numerator,this.denominator,1);
+        }else{
+            var h=lib.gcd(numerator0,denominator0);
+            this.numerator=Operation.divide(numerator0,h,1);
+            this.denominator=Operation.divide(denominator0,h,1);
+            this.type="Fraction";
+            this.value=Operation.divide(this.numerator,this.denominator,1);
+        }
     }
     add(n){
         if(n.type&&n.type=="Fraction"){
