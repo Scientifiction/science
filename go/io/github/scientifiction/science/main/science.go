@@ -1,5 +1,0 @@
-package science
-
-import(
-  "fmt"
-)
