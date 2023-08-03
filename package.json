@@ -1,0 +1,41 @@
+{
+  "name": "scienced",
+  "version": "0.0.2",
+  "description": "node.js scientific computing and data tools",
+  "keywords": [
+    "math",
+    "physics",
+    "chemistry",
+    "science",
+    "compute"
+  ],
+  "directories": {
+    "math": "Mathm/",
+    "chemistry": "Chemistry/",
+    "physics": "Physics/",
+    "browser": "browser/",
+    "test": "test/"
+  },
+  "main": "./Science.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Scientifiction/science"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "contributors": [
+    {
+      "name": "Sife-shuo",
+      "email": "sifed@qq.com"
+    },
+    {
+      "name": "tcxone",
+      "email": "tcxone@proton.me"
+    }
+  ],
+  "engines": {
+    "node": ">=3.0.0"
+  }
+}
