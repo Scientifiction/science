@@ -1,0 +1,35 @@
+{
+  "name": "chemistryhelper",
+  "version": "0.0.2",
+  "description": "Chemical database , equation and chemical formula tools",
+  "keywords": [
+    "chemistry",
+    "science",
+    "compute"
+  ],
+  "directories": {
+    "test": "test/"
+  },
+  "main": "Chemistry.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Scientifiction/science"
+  },
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "contributors": [
+    {
+      "name": "Sife-shuo",
+      "email": "sifed@qq.com"
+    },
+    {
+      "name": "tcxone",
+      "email": "tcxone@proton.me"
+    }
+  ],
+  "engines": {
+    "node": ">=3.0.0"
+  }
+}
