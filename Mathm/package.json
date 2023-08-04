@@ -1,23 +1,17 @@
 {
-  "name": "scienced",
+  "name": "mathm",
   "version": "0.0.2",
-  "description": "node.js scientific computing and data tools",
+  "description": "Mathematical function integration and operation tools",
   "keywords": [
     "math",
-    "physics",
-    "chemistry",
     "science",
     "compute",
     "statistics"
   ],
   "directories": {
-    "math": "Mathm/",
-    "chemistry": "Chemistry/",
-    "physics": "Physics/",
-    "browser": "browser/",
     "test": "test/"
   },
-  "main": "./Science.js",
+  "main": "Mathm.js",
   "license": "MIT",
   "repository": {
     "type": "git",
