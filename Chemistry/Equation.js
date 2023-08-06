@@ -1,7 +1,8 @@
 const Wheel=require("./Wheel");
 const Speed=require("./Speed");
-const Formula=require("./Formula")
-
+const Formula=require("./Formula");
+const MMatrix=require("./MMatrix");
+const Mlib=require("./Mlib");
 class Equation{
     constructor(equ){
         var f=equ.replaceAll(" ","").split("=");
@@ -10,54 +11,63 @@ class Equation{
         this.op=this.left.map(e=>e[1].all()).concat(this.right.map(e=>e[1].reverse()));
     }
     trim(){
-        var sumt=new Formula({});
-        this.left.forEach(e=>{
-            sumt=sumt.add(e[1])
-        });
-        var sumr=new Formula({});
-        this.right.forEach(e=>{
-            sumr=sumr.add(e[1])
-        });
-        var andt=sumr.reduce(sumt).all();
-        for(var i in sumr.mula){
-            sumt.mula[i]=Wheel.lcm(sumt.mula[i],sumr.mula[i]);
+        var u={};
+        for(var i=0;i<this.left.length;i++){
+            for(var j in this.left[i][1].mula){
+                if(u[j]){
+                    u[j].push(this.left[i][1].mula[j])
+                }else{
+                    u[j]=Array(i).fill(0).concat([this.left[i][1].mula[j]])
+                }
+            }
+            for(var j in u){
+                if(u[j].length==i){
+                    u[j].push(0)
+                }
+            }
         }
-        var standard=Array(this.left.length).fill(0).map((e,m)=>{
-            var g=1;
-            var az=this.left[m][1].all();
-            for(var i in az){
-                g*=Math.ceil(sumt.mula[i]/az[i])
+        for(var i=0;i<this.right.length;i++){
+            for(var j in this.right[i][1].mula){
+                if(u[j]){
+                    u[j].push(-this.right[i][1].mula[j])
+                }else{
+                    u[j]=Array(i).fill(0).concat([-this.right[i][1].mula[j]])
+                }
             }
-            return g;
-        }).concat(Array(this.right.length).fill(0).map((e,m)=>{
-            var g=1;
-            var az=this.right[m][1].all();
-            for(var i in az){
-                g*=Math.ceil(sumt.mula[i]/az[i])
+            for(var j in u){
+                if(u[j].length==i){
+                    u[j].push(0)
+                }
             }
-            return g;
-        }));
-        var k=Array(this.left.length+this.right.length).fill(0);
-        var allnum=1;
-        standard.map(e=>allnum*=e+1);
-        var sum;
-        for(var i=0;i<allnum;i++){
-            sum={};
-            for(var j in k){
-                sum=Speed.add(sum,Speed.mult(this.op[j],k[j]))
-            }
-            if(Speed.isequal(sum,andt)){
-                break;
-            }
-            if(i!=allnum-1){Wheel.standardadd(k,standard);}
+        }
+        for(var j in u){
+            u[j].push(0)
+        }
+        u=Object.values(u).slice(0,this.left.length+this.right.length-1);
+        u=new MMatrix(u).homofunc();
+        var maxf=0
+        for(var i in u){
+            var j=Mlib.floatlen(u[i]);
+            maxf=maxf>j?maxf:j;
+        }
+        maxf=10**maxf;
+        for(var i in u){
+            u[i]*=maxf;
+        }
+        maxf=u[0];
+        for(var i in u){
+            maxf=Mlib.gcd(u[i],maxf);
+        }
+        for(var i in u){
+            u[i]/=maxf;
         }
         for(var i=0;i<this.left.length;i++){
-            this.left[i][0]+=k[i];
+            this.left[i][0]=u[i]
         }
-        for(var i=0;i<k.length-this.left.length;i++){
-            this.right[i][0]+=k[i+this.left.length];
+        for(var i=0;i<this.right.length;i++){
+            this.right[i][0]=u[i+this.left.length]
         }
-        return k;
+        return u;
     }
     toString(){
         var s="";
