@@ -93,7 +93,30 @@ class Matrix{
     conjtrans(){
         return this.conjugate().trans();
     }
-    homofunc(){}
+    homofunc(){
+        if(this.n-this.m!=1){
+            throw("The size difference of the linear matrix of a homogeneous equation is not 1")
+        }
+        var x=Array(this.m).fill(0);
+        var f=[];
+        Object.assign(f,this.arr);
+        for(var i=0;i<f.length;i++){
+            for(var j=i+1;j<f.length;j++){
+                var h=Operation.divide(f[j][i],f[i][i]);
+                for(var k=0;k<f[0].length;k++){
+                    f[j][k]=Operation.reduce(f[j][k],Operation.mult(f[i][k],h))
+                }
+            }
+        }
+        for(var i=f.length-1;i>=0;i--){
+            var sum=f[i][f.length];
+            for(var j=f.length-1;j>i;j--){
+                sum=Operation.reduce(sum,Operation.mult(x[j],f[i][j]))
+            }
+            x[i]=Operation.divide(sum,f[i][i]);
+        }
+        return x;
+    }
     trace(){
         var f=0;
         for(var i=0;i<this.m;i++){
