@@ -30,6 +30,19 @@ Operation.reduce=function(a,b){
         return a-b;
     }
 }
+Operation.bereduced=function(a,b){
+    if(Operation.list.indexOf(a.type)!=-1){
+        if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){
+            return b.reduce(a)
+        }else{
+            return a.bereduced(b);
+        }
+    }else if(Operation.list.indexOf(b.type)!=-1){
+        return b.reduce(a);
+    }else{
+        return b-a;
+    }
+}
 Operation.mult=function(a,b){
     if(Operation.list.indexOf(a.type)!=-1){
         if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){
@@ -56,6 +69,21 @@ Operation.divide=function(a,b){
         return a/b;
     }else{
         return new Fraction(a,b);
+    }
+}
+Operation.bedivided=function(a,b){
+    if(Operation.list.indexOf(a.type)!=-1){
+        if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){
+            return b.divide(a)
+        }else{
+            return a.bedivided(b);
+        }
+    }else if(Operation.list.indexOf(b.type)!=-1){
+        return b.divide(a);
+    }else if(arguments[2]){
+        return b/a;
+    }else{
+        return new Fraction(b,a);
     }
 }
 module.exports=Operation;

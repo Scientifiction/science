@@ -61,6 +61,14 @@ class Fraction{
             return new Fraction(Operation.reduce(this.numerator,Operation.mult(n,this.denominator)),this.denominator)
         }
     }
+    bereduced(n){
+        if(n.type&&n.type=="Fraction"){
+            var h=lib.lcm(this.denominator,n.denominator);
+            return new Fraction(Operation.reduce(Operation.mult(n.numerator,Operation.divide(h,n.denominator,1)),Operation.divide(Operation.mult(this.numerator,h),this.denominator,1)),h);
+        }else{
+            return new Fraction(Operation.reduce(Operation.mult(n,this.denominator),this.numerator),this.denominator)
+        }
+    }
     mult(n){
         if(n.type&&n.type=="Fraction"){
             return new Fraction(Operation.mult(this.numerator,n.numerator),Operation.mult(n.denominator,this.denominator));
@@ -73,6 +81,13 @@ class Fraction{
             return new Fraction(Operation.mult(this.numerator,n.denominator),Operation.mult(n.numerator,this.denominator));
         }else{
             return new Fraction(this.numerator,Operation.mult(this.denominator,n))
+        }
+    }
+    bedivided(n){
+        if(n.type&&n.type=="Fraction"){
+            return new Fraction(Operation.mult(n.numerator,this.denominator),Operation.mult(this.numerator,n.denominator));
+        }else{
+            return new Fraction(Operation.mult(this.denominator,n),this.numerator)
         }
     }
     trim(){

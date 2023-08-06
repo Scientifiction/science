@@ -36,7 +36,13 @@ class I{
         }else{
             return new I(this.real-n,this.imaginary);
         }
-        
+    }
+    bereduced(n){
+        if(n.type&&n.type=="I"){
+            return new I(n.real-this.real,n.imaginary-this.imaginary);
+        }else{
+            return new I(n-this.real,this.imaginary);
+        }
     }
     divide(n){
         if(n.imaginary!=0&&n.type&&n.type=="I"){
@@ -44,7 +50,13 @@ class I{
         }else{
             return new I(this.real/n,this.imaginary/n);
         }
-        
+    }
+    bedivide(n){
+        if(n.imaginary!=0&&n.type&&n.type=="I"){
+            return n.mult(this.conjugate()).divide(this.mult(this.conjugate()));
+        }else{
+            return new I(n/this.real,n/this.imaginary);
+        }
     }
 }
 module.exports=I;
