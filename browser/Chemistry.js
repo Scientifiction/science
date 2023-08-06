@@ -256,11 +256,12 @@ const Chemistry=(function(){
         trim(){
             var u={};
             for(var i=0;i<this.left.length;i++){
-                for(var j in this.left[i][1].mula){
+                var t=this.left[i][1].all()
+                for(var j in t){
                     if(u[j]){
-                        u[j].push(this.left[i][1].mula[j])
+                        u[j].push(t[j])
                     }else{
-                        u[j]=Array(i).fill(0).concat([this.left[i][1].mula[j]])
+                        u[j]=Array(i).fill(0).concat([t[j]])
                     }
                 }
                 for(var j in u){
@@ -270,15 +271,16 @@ const Chemistry=(function(){
                 }
             }
             for(var i=0;i<this.right.length;i++){
-                for(var j in this.right[i][1].mula){
+                var t=this.right[i][1].all()
+                for(var j in t){
                     if(u[j]){
-                        u[j].push(-this.right[i][1].mula[j])
+                        u[j].push(-t[j])
                     }else{
-                        u[j]=Array(i).fill(0).concat([-this.right[i][1].mula[j]])
+                        u[j]=Array(i+this.left.length-1).fill(0).concat([-t[j]])
                     }
                 }
                 for(var j in u){
-                    if(u[j].length==i){
+                    if(u[j].length==i+this.left.length){
                         u[j].push(0)
                     }
                 }
