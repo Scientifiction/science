@@ -1,4 +1,48 @@
 const Chemistry=(function(){
+    const Mlib={
+        floatlen:function(n){
+            var f=String(n);
+            if(f.indexOf(".")==-1){
+                return 0;
+            }else{
+                return f.slice(f.indexOf(".")+1).length;
+            }
+        }
+    }
+    class MMatrix{
+        constructor(arr){
+            this.arr=arr;
+            this.m=arr.length;
+            this.n=arr[0].length;
+        }
+        homofunc(){
+            if(this.n-this.m!=1&&this.n-this.m!=2){
+                throw("The size difference of the linear matrix of a homogeneous equation is not 1")
+            }
+            var x=Array(this.m).fill(0);
+            if(this.n-this.m==2){
+                x.push(1)
+            }
+            var f=[];
+            Object.assign(f,this.arr);
+            for(var i=0;i<f.length;i++){
+                for(var j=i+1;j<f.length;j++){
+                    var h=f[j][i]/f[i][i];
+                    for(var k=0;k<f[0].length;k++){
+                        f[j][k]=f[j][k]-f[i][k]*h
+                    }
+                }
+            }
+            for(var i=f.length-1;i>=0;i--){
+                var sum=f[i][f[0].length-1];
+                for(var j=f[0].length-2;j>i;j--){
+                    sum=sum-x[j]*f[i][j]
+                }
+                x[i]=sum/f[i][i];
+            }
+            return x;
+        }
+    }
     const Chemistry={};
     Chemistry.Wheel={};
     Chemistry.Wheel.y=a=>a.match(/(\(([A-Z][a-z]{0,1}[0-9]*)+\)[0-9]+)|([A-Z][a-z]{0,1}[0-9]*)/g);
@@ -210,54 +254,63 @@ const Chemistry=(function(){
             this.op=this.left.map(e=>e[1].all()).concat(this.right.map(e=>e[1].reverse()));
         }
         trim(){
-            var sumt=new Formula({});
-            this.left.forEach(e=>{
-                sumt=sumt.add(e[1])
-            });
-            var sumr=new Formula({});
-            this.right.forEach(e=>{
-                sumr=sumr.add(e[1])
-            });
-            var andt=sumr.reduce(sumt).all();
-            for(var i in sumr.mula){
-                sumt.mula[i]=Chemistry.Wheel.lcm(sumt.mula[i],sumr.mula[i]);
+            var u={};
+            for(var i=0;i<this.left.length;i++){
+                for(var j in this.left[i][1].mula){
+                    if(u[j]){
+                        u[j].push(this.left[i][1].mula[j])
+                    }else{
+                        u[j]=Array(i).fill(0).concat([this.left[i][1].mula[j]])
+                    }
+                }
+                for(var j in u){
+                    if(u[j].length==i){
+                        u[j].push(0)
+                    }
+                }
             }
-            var standard=Array(this.left.length).fill(0).map((e,m)=>{
-                var g=1;
-                var az=this.left[m][1].all();
-                for(var i in az){
-                    g*=Math.ceil(sumt.mula[i]/az[i])
+            for(var i=0;i<this.right.length;i++){
+                for(var j in this.right[i][1].mula){
+                    if(u[j]){
+                        u[j].push(-this.right[i][1].mula[j])
+                    }else{
+                        u[j]=Array(i).fill(0).concat([-this.right[i][1].mula[j]])
+                    }
                 }
-                return g;
-            }).concat(Array(this.right.length).fill(0).map((e,m)=>{
-                var g=1;
-                var az=this.right[m][1].all();
-                for(var i in az){
-                    g*=Math.ceil(sumt.mula[i]/az[i])
+                for(var j in u){
+                    if(u[j].length==i){
+                        u[j].push(0)
+                    }
                 }
-                return g;
-            }));
-            var k=Array(this.left.length+this.right.length).fill(0);
-            var allnum=1;
-            standard.map(e=>allnum*=e+1);
-            var sum;
-            for(var i=0;i<allnum;i++){
-                sum={};
-                for(var j in k){
-                    sum=Chemistry.Speed.add(sum,Chemistry.Speed.mult(this.op[j],k[j]))
-                }
-                if(Chemistry.Speed.isequal(sum,andt)){
-                    break;
-                }
-                if(i!=allnum-1){Chemistry.Wheel.standardadd(k,standard);}
+            }
+            for(var j in u){
+                u[j].push(0)
+            }
+            u=Object.values(u).slice(0,this.left.length+this.right.length-1);
+            u=new MMatrix(u).homofunc();
+            var maxf=0
+            for(var i in u){
+                var j=Mlib.floatlen(u[i]);
+                maxf=maxf>j?maxf:j;
+            }
+            maxf=10**maxf;
+            for(var i in u){
+                u[i]*=maxf;
+            }
+            maxf=u[0];
+            for(var i in u){
+                maxf=Chemistry.Wheel.gcd(u[i],maxf);
+            }
+            for(var i in u){
+                u[i]/=maxf;
             }
             for(var i=0;i<this.left.length;i++){
-                this.left[i][0]+=k[i];
+                this.left[i][0]=u[i]
             }
-            for(var i=0;i<k.length-this.left.length;i++){
-                this.right[i][0]+=k[i+this.left.length];
+            for(var i=0;i<this.right.length;i++){
+                this.right[i][0]=u[i+this.left.length]
             }
-            return k;
+            return u;
         }
         toString(){
             var s="";
