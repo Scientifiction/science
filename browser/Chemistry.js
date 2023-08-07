@@ -16,11 +16,8 @@ const Chemistry=(function(){
             this.n=arr[0].length;
         }
         homofunc(){
-            if(this.n-this.m!=1&&this.n-this.m!=2){
-                throw("The size difference of the linear matrix of a homogeneous equation is not 1")
-            }
             var x=Array(this.m).fill(0);
-            if(this.n-this.m==2){
+            for(var i=0;i<this.n-this.m-1;i++){
                 x.push(1)
             }
             var f=[];
@@ -28,8 +25,22 @@ const Chemistry=(function(){
             for(var i=0;i<f.length;i++){
                 for(var j=i+1;j<f.length;j++){
                     var h=f[j][i]/f[i][i];
-                    for(var k=0;k<f[0].length;k++){
-                        f[j][k]=f[j][k]-f[i][k]*h
+                    if(j!=f.length-1&&f[j][j]==f[i][j]*h){
+                        var m=j;
+                        while(f[j][j]==f[i][j]*h){
+                            if(f[m+1][i]){
+                                h=f[j][i]/f[++m][i]
+                            }else{
+                                m++;
+                            }
+                        }
+                        for(var k=0;k<f[0].length;k++){
+                            f[j][k]=f[j][k]-f[m][k]*h
+                        }
+                    }else{
+                        for(var k=0;k<f[0].length;k++){
+                            f[j][k]=f[j][k]-f[i][k]*h
+                        }
                     }
                 }
             }
@@ -107,6 +118,63 @@ const Chemistry=(function(){
                 Chemistry.Wheel.standardadd(b,a,le-1)
             }
         }
+    }
+    
+    Chemistry.Wheel.esort=function(a){
+        var f=[];
+        for(var i=0;i<a.length;i++){
+            var s=[];
+            for(var j=0;j<a.length;j++){
+                if(a[i][j]!=0){
+                    s.push(j)
+                }
+            }
+            f.push(s)
+        }
+        function sadd(b,a){
+            var le=arguments[2]+1?arguments[2]:b.length-1;
+            b[le]++;
+            if(b[le]>a[le]){
+                b[le]=0;
+                if(le==0){
+                    throw("Bigger than standard")
+                }else{
+                    sadd(b,a,le-1)
+                }
+            }
+        }
+        var standard=f.map(e=>e.length-1);
+        var s=Array(f.length).fill(0);
+        function c(s){
+            var g=[];
+            for(var h=0;h<f.length;h++){
+                if(g.includes(f[h][s[h]])){
+                    sadd(s,standard);
+                    return c(s);
+                }else{
+                    g.push(f[h][s[h]]);
+                }
+            }
+            
+            return g; 
+        }
+        return c(s)
+    }
+    Chemistry.Wheel.dsort=function(a,s){
+        var f={};
+        f.length=s.length;
+        for(var i=0;i<s.length;i++){
+            f[s[i]]=a[i]
+        }
+        return Array.from(f);
+    }
+    Chemistry.Wheel.rsort=function(a,s){
+        var f={};
+        f.length=s.length;
+        for(var i=0;i<s.length;i++){
+            f[i]=a[s[i]]
+        }
+        return Array.from(f);
     }
 
     class Formula{
@@ -289,6 +357,8 @@ const Chemistry=(function(){
                 u[j].push(0)
             }
             u=Object.values(u).slice(0,this.left.length+this.right.length-1);
+            var sortarr=Wheel.esort(u);
+            u=Chemistry.Wheel.dsort(u,sortarr);
             u=new MMatrix(u).homofunc();
             var maxf=0
             for(var i in u){
@@ -312,7 +382,7 @@ const Chemistry=(function(){
             for(var i=0;i<this.right.length;i++){
                 this.right[i][0]=u[i+this.left.length]
             }
-            return u;
+            return {u,sortarr};
         }
         toString(){
             var s="";
