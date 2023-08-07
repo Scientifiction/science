@@ -1,3 +1,4 @@
+const lib=require("./lib");
 var Operation={};
 Operation.list=["I","Fraction","Det","Matrix"];
 Operation.add=function(a,b){
@@ -84,6 +85,32 @@ Operation.bedivided=function(a,b){
         return b/a;
     }else{
         return new Fraction(b,a);
+    }
+}
+Operation.involute=function(a,b){
+    if(Operation.list.indexOf(a.type)!=-1){
+        if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){
+            return b.binvoluted(a)
+        }else{
+            return a.involute(b);
+        }
+    }else if(Operation.list.indexOf(b.type)!=-1){
+        return b.beinvoluted(a);
+    }else{
+        return lib.pow(a,b);
+    }
+}
+Operation.beinvoluted=function(a,b){
+    if(Operation.list.indexOf(a.type)!=-1){
+        if(b.type&&Operation.list.indexOf(b.type)>Operation.list.indexOf(a.type)){
+            return b.involute(a)
+        }else{
+            return a.beinvoluted(b);
+        }
+    }else if(Operation.list.indexOf(b.type)!=-1){
+        return b.involute(a);
+    }else{
+        return lib.pow(b,a);
     }
 }
 module.exports=Operation;

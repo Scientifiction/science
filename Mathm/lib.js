@@ -19,5 +19,6 @@ lib.findprimes=(n)=>{var P=[];var isPrime = new Array(n).fill(1);
 }
 lib.round=function(n){if(arguments[1]){var m=arguments[1];return Math.round(n*Math.pow(10,m))/Math.pow(10,m)}else{return Math.round(n)}}
 lib.log=function(N){if(arguments[1]){var a=arguments[0];var N=arguments[1];return Math.log(N)/Math.log(a)}else{return Math.log(N)}}
+lib.pow=function(a,b){return Math.pow(a,b)}
 lib.root=(a,b)=>lib.pow(a,1/b)
 module.exports=lib;
