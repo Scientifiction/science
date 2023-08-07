@@ -5,11 +5,8 @@ class MMatrix{
         this.n=arr[0].length;
     }
     homofunc(){
-        if(this.n-this.m!=1&&this.n-this.m!=2){
-            throw("The size difference of the linear matrix of a homogeneous equation is not 1")
-        }
         var x=Array(this.m).fill(0);
-        if(this.n-this.m==2){
+        for(var i=0;i<this.n-this.m-1;i++){
             x.push(1)
         }
         var f=[];
@@ -17,8 +14,22 @@ class MMatrix{
         for(var i=0;i<f.length;i++){
             for(var j=i+1;j<f.length;j++){
                 var h=f[j][i]/f[i][i];
-                for(var k=0;k<f[0].length;k++){
-                    f[j][k]=f[j][k]-f[i][k]*h
+                if(j!=f.length-1&&f[j][j]==f[i][j]*h){
+                    var m=j;
+                    while(f[j][j]==f[i][j]*h){
+                        if(f[m+1][i]){
+                            h=f[j][i]/f[++m][i]
+                        }else{
+                            m++;
+                        }
+                    }
+                    for(var k=0;k<f[0].length;k++){
+                        f[j][k]=f[j][k]-f[m][k]*h
+                    }
+                }else{
+                    for(var k=0;k<f[0].length;k++){
+                        f[j][k]=f[j][k]-f[i][k]*h
+                    }
                 }
             }
         }

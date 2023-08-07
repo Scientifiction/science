@@ -46,6 +46,8 @@ class Equation{
             u[j].push(0)
         }
         u=Object.values(u).slice(0,this.left.length+this.right.length-1);
+        var sortarr=Wheel.esort(u);
+        u=Wheel.dsort(u,sortarr);
         u=new MMatrix(u).homofunc();
         var maxf=0
         for(var i in u){
@@ -69,7 +71,7 @@ class Equation{
         for(var i=0;i<this.right.length;i++){
             this.right[i][0]=u[i+this.left.length]
         }
-        return u;
+        return {u,sortarr};
     }
     toString(){
         var s="";

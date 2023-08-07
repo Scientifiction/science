@@ -62,4 +62,60 @@ Wheel.standardadd=function(b,a){
         }
     }
 }
+Wheel.esort=function(a){
+    var f=[];
+    for(var i=0;i<a.length;i++){
+        var s=[];
+        for(var j=0;j<a.length;j++){
+            if(a[i][j]!=0){
+                s.push(j)
+            }
+        }
+        f.push(s)
+    }
+    function sadd(b,a){
+        var le=arguments[2]+1?arguments[2]:b.length-1;
+        b[le]++;
+        if(b[le]>a[le]){
+            b[le]=0;
+            if(le==0){
+                throw("Bigger than standard")
+            }else{
+                sadd(b,a,le-1)
+            }
+        }
+    }
+    var standard=f.map(e=>e.length-1);
+    var s=Array(f.length).fill(0);
+    function c(s){
+        var g=[];
+        for(var h=0;h<f.length;h++){
+            if(g.includes(f[h][s[h]])){
+                sadd(s,standard);
+                return c(s);
+            }else{
+                g.push(f[h][s[h]]);
+            }
+        }
+        
+        return g; 
+    }
+    return c(s)
+}
+Wheel.dsort=function(a,s){
+    var f={};
+    f.length=s.length;
+    for(var i=0;i<s.length;i++){
+        f[s[i]]=a[i]
+    }
+    return Array.from(f);
+}
+Wheel.rsort=function(a,s){
+    var f={};
+    f.length=s.length;
+    for(var i=0;i<s.length;i++){
+        f[i]=a[s[i]]
+    }
+    return Array.from(f);
+}
 module.exports=Wheel;
