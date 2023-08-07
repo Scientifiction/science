@@ -357,7 +357,7 @@ const Chemistry=(function(){
                 u[j].push(0)
             }
             u=Object.values(u).slice(0,this.left.length+this.right.length-1);
-            var sortarr=Wheel.esort(u);
+            var sortarr=Chemistry.Wheel.esort(u);
             u=Chemistry.Wheel.dsort(u,sortarr);
             u=new MMatrix(u).homofunc();
             var maxf=0
