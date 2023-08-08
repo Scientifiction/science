@@ -9,8 +9,7 @@ class Involution{
             this.exponent=new Fraction(exponent);
         }
         this.type="Involution";
-    }
-    value(){
-
+        this.value=Operation.involute(base_number,exponent);
     }
 }
+module.exports=Involution;

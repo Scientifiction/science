@@ -24,4 +24,5 @@ Mathm.Det=require("./Det");
 Mathm.Fraction=require("./Fraction");
 Mathm.O=require("./Operation");
 Mathm.Vector2d=require("./Vector2d");
+Mathm.Involution=require("./Involution")
 module.exports=Mathm;

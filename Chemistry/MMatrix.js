@@ -16,7 +16,7 @@ class MMatrix{
                 var h=f[j][i]/f[i][i];
                 if(j!=f.length-1&&f[j][j]==f[i][j]*h){
                     var m=j;
-                    while(f[j][j]==f[i][j]*h){
+                    while(f[j][j]==f[i][j]*h&&m<f.length-1){
                         if(f[m+1][i]){
                             h=f[j][i]/f[++m][i]
                         }else{
