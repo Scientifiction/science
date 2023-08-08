@@ -21,5 +21,5 @@ lib.reciprocal=a=>1/a
 lib.continued=(arr)=>{return arr.slice(1).toString()==[].toString()?arr[0]:arr[0]+1/eval("lib.continued(["+String(arr.slice(1))+"])")}//Continued fraction
 lib.sigma=(i,n,f)=>lib.range(i,n+1).reduce((a,b) =>O.add(a,f(b)),0)
 lib.pi=(k,n,f)=>{var r=1;lib.range(k,n+1).map(e=>{r*=f(e)});return r}
-lib.Set=require("./Set");
+lib.Set=require("./container/Set");
 module.exports=lib;

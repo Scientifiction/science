@@ -1,4 +1,4 @@
-const Operation=require("./Operation");
+const Operation=require("../Operation");
 class Vector2d{
     constructor(a,b){
         this.a=a;

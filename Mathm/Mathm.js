@@ -18,11 +18,11 @@ Mathm.sigma=lib2.sigma;
 Mathm.pi=lib2.pi;
 Mathm.Set=lib2.Set;
 Mathm.Statistics=require("./Statistics");
-Mathm.I=Mathm.Complex=require("./I");
-Mathm.Matrix=require("./Matrix");
-Mathm.Det=require("./Det");
-Mathm.Fraction=require("./Fraction");
+Mathm.I=Mathm.Complex=require("./container/I");
+Mathm.Matrix=require("./container/Matrix");
+Mathm.Det=require("./container/Det");
+Mathm.Fraction=require("./O/Fraction");
 Mathm.O=require("./Operation");
-Mathm.Vector2d=require("./Vector2d");
-Mathm.Involution=require("./Involution")
+Mathm.Vector2d=require("./container/Vector2d");
+Mathm.Involution=require("./O/Involution")
 module.exports=Mathm;

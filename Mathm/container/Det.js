@@ -1,4 +1,4 @@
-const Operation=require("./Operation");
+const Operation=require("../Operation");
 class Det{
     constructor(arr){
         if(arr.length!=arr[0].length){

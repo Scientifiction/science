@@ -1,5 +1,5 @@
-const Operation=require("./Operation");
-const lib=require("./lib");
+const Operation=require("../Operation");
+const lib=require("../lib");
 /*
 Operation.divide=function(a,b){
     if(a.type=="I"||a.type=="Matrix"){
