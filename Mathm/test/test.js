@@ -17,4 +17,5 @@ console.log(f.arr)*/
 //console.log(new Mathm.Fraction(0.618))
 //console.log(new Mathm.Fraction(1))
 //console.log(new Mathm.Matrix([[1,2,3],[4,5,6]]).homofunc())
-console.log(new Mathm.Det([[0,1,2],[3,4,5],[6,7,0]]).totriangle().arr)
+//console.log(new Mathm.Det([[3,1,-1,2],[-5,1,3,-4],[2,0,1,-1],[1,-5,3,-3]]).totriangle().arr)
+console.log(new Mathm.Involution(new Mathm.I(2,3),3))
