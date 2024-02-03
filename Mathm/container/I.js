@@ -46,7 +46,7 @@ class I{
     }
     divide(n){
         if(n.imaginary!=0&&n.type&&n.type=="I"){
-            return this.mult(n.conjugate()).divide(n.mult(n.conjugate()));
+            return this.mult(n.conjugate()).divide(n.mult(n.conjugate()).real);
         }else{
             return new I(this.real/n,this.imaginary/n);
         }
